@@ -1,0 +1,452 @@
+{# Component: section-coverage-grid #}
+{# Purpose: Display S10-specific coverage features in a modern grid #}
+{# Parameters: title, subtitle, features (array) #}
+
+<section class="c-coverage-grid">
+  <div class="c-coverage-grid__container">
+    <div class="c-coverage-grid__header">
+      <h2 class="c-coverage-grid__title">
+        {{ title | default("Comprehensive S10 Coverage Options") }}
+      </h2>
+      <p class="c-coverage-grid__subtitle">
+        {{ subtitle | default("Tailored protection for every S10 owner - from daily drivers to show trucks") }}
+      </p>
+    </div>
+
+    <div class="c-coverage-grid__grid">
+      <div class="c-coverage-grid__card c-coverage-grid__card--primary">
+        <div class="c-coverage-grid__card-header">
+          <div class="c-coverage-grid__icon-wrapper">
+            <div class="c-coverage-grid__icon-bg"></div>
+            <svg class="c-coverage-grid__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="c-coverage-grid__card-title">Comprehensive S10 Protection</h3>
+        </div>
+        <div class="c-coverage-grid__card-content">
+          <ul class="c-coverage-grid__list">
+            <li>Full collision and comprehensive coverage</li>
+            <li>S10-specific parts guarantee</li>
+            <li>Agreed value options for classics</li>
+            <li>Gap coverage for newer S10s</li>
+          </ul>
+          <div class="c-coverage-grid__price">
+            <span class="c-coverage-grid__price-from">From</span>
+            <span class="c-coverage-grid__price-amount">$89</span>
+            <span class="c-coverage-grid__price-period">/month</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="c-coverage-grid__card">
+        <div class="c-coverage-grid__card-header">
+          <div class="c-coverage-grid__icon-wrapper">
+            <svg class="c-coverage-grid__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="c-coverage-grid__card-title">Classic S10 Coverage</h3>
+        </div>
+        <div class="c-coverage-grid__card-content">
+          <ul class="c-coverage-grid__list">
+            <li>First-gen S10 specialists</li>
+            <li>Agreed value protection</li>
+            <li>Limited mileage discounts</li>
+            <li>Show & display coverage</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="c-coverage-grid__card">
+        <div class="c-coverage-grid__card-header">
+          <div class="c-coverage-grid__icon-wrapper">
+            <svg class="c-coverage-grid__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="c-coverage-grid__card-title">Modified S10 Protection</h3>
+        </div>
+        <div class="c-coverage-grid__card-content">
+          <ul class="c-coverage-grid__list">
+            <li>Engine swap coverage</li>
+            <li>Lift kit protection</li>
+            <li>Custom parts coverage</li>
+            <li>Performance modifications</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="c-coverage-grid__card">
+        <div class="c-coverage-grid__card-header">
+          <div class="c-coverage-grid__icon-wrapper">
+            <svg class="c-coverage-grid__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064" />
+            </svg>
+          </div>
+          <h3 class="c-coverage-grid__card-title">Off-Road & ZR2 Coverage</h3>
+        </div>
+        <div class="c-coverage-grid__card-content">
+          <ul class="c-coverage-grid__list">
+            <li>Trail damage protection</li>
+            <li>4x4 component coverage</li>
+            <li>Winch & recovery gear</li>
+            <li>Off-road equipment</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="c-coverage-grid__card">
+        <div class="c-coverage-grid__card-header">
+          <div class="c-coverage-grid__icon-wrapper">
+            <svg class="c-coverage-grid__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3 class="c-coverage-grid__card-title">Liability Plus</h3>
+        </div>
+        <div class="c-coverage-grid__card-content">
+          <ul class="c-coverage-grid__list">
+            <li>Higher liability limits</li>
+            <li>Uninsured motorist</li>
+            <li>Medical payments</li>
+            <li>Personal injury protection</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="c-coverage-grid__card">
+        <div class="c-coverage-grid__card-header">
+          <div class="c-coverage-grid__icon-wrapper">
+            <svg class="c-coverage-grid__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <h3 class="c-coverage-grid__card-title">Theft & Vandalism</h3>
+        </div>
+        <div class="c-coverage-grid__card-content">
+          <ul class="c-coverage-grid__list">
+            <li>Full theft protection</li>
+            <li>Parts theft coverage</li>
+            <li>Vandalism repair</li>
+            <li>GPS tracking discount</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="c-coverage-grid__features">
+      <h3 class="c-coverage-grid__features-title">Every S10 Policy Includes:</h3>
+      <div class="c-coverage-grid__features-list">
+        <div class="c-coverage-grid__feature">
+          <svg class="c-coverage-grid__feature-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          </svg>
+          <span>24/7 S10 Roadside Assistance</span>
+        </div>
+        <div class="c-coverage-grid__feature">
+          <svg class="c-coverage-grid__feature-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          </svg>
+          <span>S10 Parts Network Access</span>
+        </div>
+        <div class="c-coverage-grid__feature">
+          <svg class="c-coverage-grid__feature-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          </svg>
+          <span>Diminished Value Coverage</span>
+        </div>
+        <div class="c-coverage-grid__feature">
+          <svg class="c-coverage-grid__feature-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          </svg>
+          <span>S10 Expert Claims Team</span>
+        </div>
+        <div class="c-coverage-grid__feature">
+          <svg class="c-coverage-grid__feature-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          </svg>
+          <span>Rental Car Coverage</span>
+        </div>
+        <div class="c-coverage-grid__feature">
+          <svg class="c-coverage-grid__feature-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+          </svg>
+          <span>Multi-S10 Discounts</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .c-coverage-grid {
+    position: relative;
+    padding: 6rem 0;
+    background: #050714;
+    overflow: hidden;
+  }
+
+  .c-coverage-grid::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse at top right, rgba(59, 130, 246, 0.1), transparent 50%),
+      radial-gradient(ellipse at bottom left, rgba(20, 184, 166, 0.1), transparent 50%);
+    pointer-events: none;
+  }
+
+  .c-coverage-grid__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .c-coverage-grid__header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .c-coverage-grid__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #ffffff 0%, #14b8a6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .c-coverage-grid__subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .c-coverage-grid__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .c-coverage-grid__card {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .c-coverage-grid__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #14b8a6, transparent);
+    animation: shimmerLine 3s ease-in-out infinite;
+    animation-play-state: paused;
+  }
+
+  .c-coverage-grid__card:hover::before {
+    animation-play-state: running;
+  }
+
+  @keyframes shimmerLine {
+    0% { left: -100%; }
+    100% { left: 100%; }
+  }
+
+  .c-coverage-grid__card:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(20, 184, 166, 0.3);
+    box-shadow: 
+      0 30px 60px rgba(0, 0, 0, 0.3),
+      0 0 80px rgba(20, 184, 166, 0.2);
+  }
+
+  .c-coverage-grid__card--primary {
+    grid-column: span 2;
+    background: linear-gradient(135deg, rgba(30, 91, 168, 0.08) 0%, rgba(20, 184, 166, 0.05) 100%);
+    border-color: rgba(59, 130, 246, 0.2);
+  }
+
+  .c-coverage-grid__card--primary:hover {
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 
+      0 30px 60px rgba(0, 0, 0, 0.4),
+      0 0 100px rgba(59, 130, 246, 0.3);
+  }
+
+  .c-coverage-grid__card-header {
+    margin-bottom: 2rem;
+  }
+
+  .c-coverage-grid__icon-wrapper {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .c-coverage-grid__icon-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.2), rgba(6, 182, 212, 0.1));
+    border-radius: 16px;
+    transform: rotate(45deg);
+  }
+
+  .c-coverage-grid__card--primary .c-coverage-grid__icon-bg {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(20, 184, 166, 0.2));
+  }
+
+  .c-coverage-grid__icon {
+    width: 32px;
+    height: 32px;
+    color: #14b8a6;
+    position: relative;
+    z-index: 1;
+  }
+
+  .c-coverage-grid__card--primary .c-coverage-grid__icon {
+    color: #60a5fa;
+  }
+
+  .c-coverage-grid__card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .c-coverage-grid__card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .c-coverage-grid__list {
+    list-style: none;
+    margin-bottom: 2rem;
+    flex: 1;
+  }
+
+  .c-coverage-grid__list li {
+    position: relative;
+    padding-left: 1.75rem;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+  }
+
+  .c-coverage-grid__list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #14b8a6;
+    font-weight: 700;
+  }
+
+  .c-coverage-grid__price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .c-coverage-grid__price-from {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .c-coverage-grid__price-amount {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #3b82f6 0%, #14b8a6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .c-coverage-grid__price-period {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .c-coverage-grid__features {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 3rem;
+    text-align: center;
+  }
+
+  .c-coverage-grid__features-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 2rem;
+  }
+
+  .c-coverage-grid__features-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .c-coverage-grid__feature {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  .c-coverage-grid__feature-icon {
+    width: 24px;
+    height: 24px;
+    color: #14b8a6;
+    flex-shrink: 0;
+  }
+
+  .c-coverage-grid__feature span {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .c-coverage-grid__card--primary {
+      grid-column: 1;
+    }
+
+    .c-coverage-grid__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .c-coverage-grid__features-list {
+      text-align: left;
+      grid-template-columns: 1fr;
+    }
+
+    .c-coverage-grid__feature {
+      justify-content: flex-start;
+    }
+  }
+</style>
