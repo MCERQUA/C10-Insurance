@@ -128,6 +128,19 @@ Full-width page sections that stack vertically to create complete pages.
 ### 🎨 UI Components
 Smaller, reusable interface elements.
 
+#### ui-top-banner
+**Path**: `src/_includes/components/ui/ui-top-banner.njk`
+**Purpose**: Fixed top banner with click-to-call phone number
+**Parameters**:
+- `phoneNumber` (string): Phone number to display - Default: "844-967-5247"
+- `phoneText` (string): Phone text to display - Default: "844-WORK-247"
+- `message` (string): Message to display - Default: "FOR A QUICK QUOTE."
+**Features**: Click-to-call functionality, animated gradient background, mobile responsive
+**Usage**:
+```nunjucks
+{% include "components/ui/ui-top-banner.njk" %}
+```
+
 #### ui-button
 **Path**: `src/_includes/components/ui/ui-button.njk`
 **Purpose**: Consistent button styling
@@ -237,5 +250,5 @@ Structural components for page layout.
 
 ---
 **Last Updated**: June 1, 2025
-**Total Components**: 11 (6 S10-specific, 5 generic)
+**Total Components**: 12 (6 S10-specific, 6 generic)
 **Next Review**: July 1, 2025
