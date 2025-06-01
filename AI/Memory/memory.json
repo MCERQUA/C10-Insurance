@@ -7,6 +7,32 @@
     "repository": "https://github.com/MCERQUA/S10-Insurance"
   },
   
+  "componentSystem": {
+    "initialized": true,
+    "architecture": "Component-based development with reusable ingredients",
+    "initCommand": "echo init",
+    "structure": {
+      "components": "src/_includes/components/",
+      "sections": "src/_includes/components/sections/",
+      "ui": "src/_includes/components/ui/",
+      "layout": "src/_includes/components/layout/"
+    },
+    "namingConventions": {
+      "sections": "section-[name].njk",
+      "ui": "ui-[name].njk",
+      "layout": "layout-[name].njk",
+      "css": ".c-[component-name]",
+      "utilities": ".u-[utility-name]",
+      "states": ".is-[state] or .has-[state]"
+    },
+    "documentation": {
+      "masterGuide": "/docs/MASTER_DEVELOPMENT_GUIDE.md",
+      "componentRegistry": "/docs/components/COMPONENT_REGISTRY.md",
+      "usageGuide": "/docs/components/COMPONENT_USAGE_GUIDE.md",
+      "developmentLog": "/docs/development-log.md"
+    }
+  },
+  
   "criticalKnowledge": {
     "templateSyntax": {
       "rule": "ALWAYS use Nunjucks syntax, NEVER use Liquid syntax",
@@ -22,6 +48,14 @@
       }
     },
     
+    "componentRules": [
+      "ALWAYS check Component Registry before creating new components",
+      "NEVER create inline styles or new CSS without checking existing components",
+      "REUSE existing components whenever possible",
+      "DOCUMENT every new component immediately in the registry",
+      "TEST components in isolation before using in pages"
+    ],
+    
     "fileExtensions": {
       "templates": ".njk",
       "markdown": ".md",
@@ -33,9 +67,34 @@
       "output": "_site/",
       "layouts": "src/_layouts/",
       "includes": "src/_includes/",
+      "components": "src/_includes/components/",
       "data": "src/_data/",
       "blog": "src/blog/"
     }
+  },
+  
+  "workflowProcedures": {
+    "sessionStart": [
+      "Run 'echo init' command",
+      "AI fetches memory.json",
+      "AI loads Component Registry",
+      "AI reviews brand style guide",
+      "AI checks development log for recent changes"
+    ],
+    "beforeCreatingContent": [
+      "Review Component Registry for existing components",
+      "Check if similar components can be reused",
+      "Plan component composition for the page",
+      "Verify brand consistency"
+    ],
+    "creatingNewComponent": [
+      "Check Component Registry first",
+      "Create component in appropriate folder",
+      "Follow naming conventions",
+      "Document in Component Registry immediately",
+      "Test component in isolation",
+      "Update development log"
+    ]
   },
   
   "commonIssues": [
@@ -50,16 +109,32 @@
       "cause": "Incorrect date filter syntax",
       "solution": "Use custom date filter with parentheses: date('%Y-%m-%d')",
       "preventiveMeasure": "Use dateReadable filter for display, date() for attributes"
+    },
+    {
+      "issue": "Duplicate styling or components",
+      "cause": "Not checking Component Registry before creating new elements",
+      "solution": "Review and use existing components from registry",
+      "preventiveMeasure": "Always run 'echo init' and check registry first"
     }
   ],
   
   "bestPractices": [
     {
+      "category": "Components",
+      "practices": [
+        "Think 'ingredients' for your 'recipe' (page)",
+        "Keep components focused on single purpose",
+        "Use semantic HTML in all components",
+        "Document all component parameters",
+        "Test components in multiple contexts"
+      ]
+    },
+    {
       "category": "Templates",
       "practices": [
         "Always use .njk extension for Nunjucks templates",
         "Use 'safe' filter for HTML content: {{ content | safe }}",
-        "Define reusable components in _includes folder",
+        "Define reusable components in _includes/components folder",
         "Use front matter for page metadata"
       ]
     },
@@ -78,7 +153,8 @@
         "Test locally with 'npm run build' before pushing",
         "Use 'npm start' for development with hot reload",
         "Check Netlify build logs for deployment errors",
-        "Keep dependencies updated in package.json"
+        "Keep dependencies updated in package.json",
+        "Update development log after each session"
       ]
     }
   ],
@@ -112,6 +188,9 @@
     "Run 'npm run build' locally to test",
     "Verify no template syntax errors",
     "Check all date filters use Nunjucks syntax",
+    "Ensure all new components are documented",
+    "Verify component registry is updated",
+    "Update development log",
     "Ensure all new files are committed",
     "Push to GitHub main branch",
     "Monitor Netlify dashboard for build status",
@@ -119,6 +198,7 @@
   ],
   
   "quickCommands": {
+    "init": "echo init - Initialize AI session with project context",
     "development": "npm start",
     "build": "npm run build",
     "serve": "npm run serve",
@@ -133,10 +213,14 @@
   },
   
   "aiNotes": [
+    "CRITICAL: Run 'echo init' at start of every session",
+    "This project uses component-based architecture - check registry first",
+    "Components are 'ingredients', pages are 'recipes'",
     "This project uses Nunjucks, not Liquid - syntax is different",
     "Always test template changes locally first",
     "Date filters require special attention - use custom filters",
     "Blog posts automatically build from markdown files",
-    "Netlify builds trigger on push to main branch"
+    "Netlify builds trigger on push to main branch",
+    "Document all changes in development log"
   ]
 }
