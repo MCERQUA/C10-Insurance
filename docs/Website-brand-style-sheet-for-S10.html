@@ -133,32 +133,23 @@
                 inset 0 0 0 1px rgba(255, 255, 255, 0.1);
         }
 
-        /* Animated Border Gradient */
+        /* Static Gradient Border */
         .header::before {
             content: '';
             position: absolute;
             inset: -2px;
             padding: 2px;
             border-radius: 30px;
-            background: linear-gradient(45deg, 
+            background: linear-gradient(135deg, 
                 #1e5ba8,
                 #3b82f6,
                 #14b8a6,
-                #06b6d4,
-                #3b82f6,
-                #1e5ba8
+                #06b6d4
             );
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
-            opacity: 0.5;
-            animation: borderRotate 8s linear infinite;
-        }
-
-        @keyframes borderRotate {
-            to {
-                transform: rotate(360deg);
-            }
+            opacity: 0.6;
         }
 
         .header h1 {
