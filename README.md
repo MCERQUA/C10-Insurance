@@ -1,182 +1,178 @@
-# S10 Insurance Website
+# S10 Insurance - Specialized Coverage for Chevy S10 Pickup Trucks
 
-Built with Eleventy (11ty) v2.0.1 and Nunjucks templates.
+![S10 Insurance](https://img.shields.io/badge/S10-Insurance-14b8a6?style=for-the-badge)
+![Eleventy](https://img.shields.io/badge/Eleventy-v2.0.1-000000?style=for-the-badge)
+![Netlify Status](https://img.shields.io/badge/Netlify-Deployed-00C7B7?style=for-the-badge)
 
-## Features
+## 🚛 About S10 Insurance
 
-- Static site generation with Eleventy
-- Nunjucks templating engine
-- Responsive design
-- Fast build times
-- SEO optimized
-- Netlify-ready deployment
-- Blog with Markdown support
+S10 Insurance is a specialized insurance website dedicated exclusively to Chevy S10 pickup truck owners. We provide tailored coverage for all S10 models from 1982-2004, including the S10 Blazer, ZR2, SS, and Xtreme variants.
 
-## Documentation
+**Live Site**: [https://s10insurance.netlify.app](https://s10insurance.netlify.app)
 
-📚 **[View Full Documentation](./docs/README.md)**
+## 🎯 Target Audience
 
-Key documentation includes:
-- [Deployment Issues & Solutions](./docs/deployment-issues.md)
-- [Nunjucks Quick Reference](./docs/nunjucks-quick-reference.md)
-- [AI Memory System](./AI/Memory/memory.json)
+- Chevy S10 pickup truck owners (1982-2004)
+- S10 enthusiasts with modified trucks
+- Classic S10 collectors
+- Daily S10 drivers seeking specialized coverage
 
-## Prerequisites
+## ✨ Features
 
-- Node.js 14.x or higher
+- **S10-Specific Coverage**: Tailored insurance for every S10 variant
+- **Model Timeline**: Interactive showcase of all S10 generations
+- **Instant Quotes**: 60-second online quotes for S10 owners
+- **Modification Friendly**: Coverage for lifts, engine swaps, and custom parts
+- **S10 Parts Network**: Access to OEM and quality aftermarket parts
+- **24/7 Support**: Dedicated S10 insurance specialists
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Eleventy (11ty)](https://www.11ty.dev/) v2.0.1
+- **Template Engine**: [Nunjucks](https://mozilla.github.io/nunjucks/)
+- **Hosting**: [Netlify](https://www.netlify.com/)
+- **Styling**: Component-scoped CSS with glassmorphism effects
+- **Design**: Ultra-modern, futuristic aesthetic
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js (v14 or higher)
 - npm or yarn
 
-## Installation
+### Installation
 
-1. Clone the repository:
 ```bash
+# Clone the repository
 git clone https://github.com/MCERQUA/S10-Insurance.git
+
+# Navigate to project directory
 cd S10-Insurance
-```
 
-2. Install dependencies:
-```bash
+# Install dependencies
 npm install
-```
 
-## Development
-
-Start the development server:
-```bash
+# Start development server
 npm start
-```
 
-This will start Eleventy in serve mode and watch for changes. The site will be available at `http://localhost:8080`.
-
-## Build
-
-Build the site for production:
-```bash
+# Build for production
 npm run build
 ```
 
-The built site will be in the `_site` directory.
+### Development Workflow
 
-## Blog Management
+1. Run `echo init` at the start of each session (loads project context)
+2. Check Component Registry before creating new components
+3. Use Nunjucks syntax (NOT Liquid)
+4. Test locally before pushing to main branch
 
-The blog section automatically includes any Markdown files in the `/src/blog/` folder.
-
-### Adding a New Blog Post
-
-1. Create a new `.md` file in `/src/blog/`
-2. Add front matter at the top of the file:
-
-```markdown
----
-title: Your Blog Post Title
-date: 2025-06-01
-author: Author Name
-excerpt: A brief summary of your post
-tags:
-  - insurance
-  - tips
----
-
-Your blog post content goes here...
-```
-
-3. The blog post will automatically appear on the blog page after the next build
-
-### Blog Features
-
-- Automatic listing on `/blog/` page
-- Individual post pages with clean URLs
-- Tag support
-- Author attribution
-- Publication dates
-- Pagination (10 posts per page)
-- Responsive design
-
-## Deployment to Netlify
-
-This project is configured for easy deployment to Netlify.
-
-### Option 1: Deploy via GitHub Integration
-
-1. Log in to [Netlify](https://app.netlify.com)
-2. Click "Add new site" → "Import an existing project"
-3. Choose GitHub and select the `S10-Insurance` repository
-4. Netlify will automatically detect the build settings from `netlify.toml`
-5. Click "Deploy site"
-
-### Option 2: Deploy via Netlify CLI
-
-1. Install Netlify CLI:
-```bash
-npm install -g netlify-cli
-```
-
-2. Build and deploy:
-```bash
-npm run build
-netlify deploy --prod --dir=_site
-```
-
-### Option 3: Drag and Drop
-
-1. Build the site locally:
-```bash
-npm run build
-```
-
-2. Drag the `_site` folder to [Netlify Drop](https://app.netlify.com/drop)
-
-## Project Structure
+## 📁 Project Structure
 
 ```
 S10-Insurance/
 ├── src/
-│   ├── _includes/       # Partial templates
-│   ├── _layouts/        # Page layouts
-│   ├── _data/           # Global data files
-│   ├── blog/            # Blog posts (Markdown files)
-│   │   ├── blog.json    # Blog configuration
-│   │   └── *.md         # Individual blog posts
-│   ├── assets/          # Static assets
-│   ├── css/             # Stylesheets
-│   ├── js/              # JavaScript files
-│   ├── images/          # Images
-│   ├── 404.njk          # 404 error page
-│   ├── blog.njk         # Blog listing page
-│   └── index.njk        # Homepage
-├── docs/                # Technical documentation
-│   ├── README.md        # Documentation index
-│   ├── deployment-issues.md  # Common issues & solutions
-│   └── nunjucks-quick-reference.md  # Template syntax guide
-├── AI/
-│   └── Memory/
-│       └── memory.json  # AI knowledge base
-├── .eleventy.js         # Eleventy configuration
-├── netlify.toml         # Netlify configuration
-├── package.json         # Project dependencies
-└── README.md            # This file
+│   ├── _includes/
+│   │   └── components/
+│   │       └── sections/      # S10-specific components
+│   ├── _layouts/              # Page layouts
+│   ├── _data/                 # Global data files
+│   ├── css/                   # Global styles
+│   ├── js/                    # JavaScript files
+│   └── index.njk              # Homepage
+├── docs/                      # Documentation
+│   ├── components/            # Component documentation
+│   ├── development-log.md     # Development history
+│   └── PROJECT_SUMMARY.md     # Project overview
+└── AI/
+    └── Memory/               # AI context files
+        └── memory.json       # Project memory
 ```
 
-## Important Notes
+## 🎨 Design System
 
-⚠️ **Template Syntax**: This project uses **Nunjucks**, not Liquid. See [documentation](./docs/nunjucks-quick-reference.md) for syntax reference.
+### Color Palette
 
-## Netlify Configuration
+- **Primary Blue**: `#1e5ba8` → `#3b82f6`
+- **Teal Secondary**: `#14b8a6` → `#06b6d4`
+- **Dark Background**: `#050714` → `#0f172a`
 
-The `netlify.toml` file includes:
-- Build command and publish directory
-- Node.js version specification
-- Custom 404 page handling
-- Security headers
-- Cache control headers for assets
+### Components
 
-## Troubleshooting
+The site uses a component-based architecture with 11 reusable components:
 
-If you encounter deployment issues, please check:
-1. [Deployment Issues Documentation](./docs/deployment-issues.md)
-2. [AI Memory System](./AI/Memory/memory.json) for known patterns
-3. Test locally with `npm run build` before pushing
+**S10-Specific Components:**
+- `section-hero-s10` - Animated hero with S10 truck silhouette
+- `section-s10-models` - Timeline of all S10 generations
+- `section-why-s10` - Value proposition for S10 insurance
+- `section-coverage-grid` - S10 coverage options
+- `section-s10-stats` - Trust indicators and statistics
+- `section-cta-s10` - Call to action with animated truck
 
-## License
+## 📊 SEO Strategy
 
-ISC
+Optimized for S10-related keywords:
+- S10 insurance
+- Chevy S10 insurance
+- S10 pickup insurance
+- S10 Blazer insurance
+- S10 ZR2 insurance
+- All model years: 1982-2004
+
+## 🔧 Component Development
+
+Components follow these conventions:
+- Self-contained with embedded styles
+- BEM-like naming: `.c-[component-name]__[element]`
+- Responsive design with mobile-first approach
+- Documented in Component Registry
+
+### Creating New Components
+
+1. Check Component Registry first
+2. Create in `src/_includes/components/sections/`
+3. Follow naming convention: `section-[name].njk`
+4. Include self-contained styles
+5. Document immediately in registry
+6. Update development log
+
+## 📝 Documentation
+
+- **[Component Registry](docs/components/COMPONENT_REGISTRY.md)** - All available components
+- **[Development Log](docs/development-log.md)** - Development history
+- **[Project Summary](docs/PROJECT_SUMMARY.md)** - Comprehensive overview
+- **[Master Guide](docs/MASTER_DEVELOPMENT_GUIDE.md)** - Development guidelines
+
+## 🚀 Deployment
+
+The site automatically deploys to Netlify when changes are pushed to the main branch.
+
+```bash
+# Test build locally
+npm run build
+
+# Push to deploy
+git push origin main
+```
+
+## 🤝 Contributing
+
+1. Check Component Registry before creating new components
+2. Follow the established design system
+3. Test all changes locally
+4. Document new components immediately
+5. Update the development log
+
+## 📞 Contact
+
+For questions about the S10 Insurance website development:
+- **Repository**: [https://github.com/MCERQUA/S10-Insurance](https://github.com/MCERQUA/S10-Insurance)
+- **Live Site**: [https://s10insurance.netlify.app](https://s10insurance.netlify.app)
+
+## 📄 License
+
+This project is proprietary to S10 Insurance.
+
+---
+
+Built with ❤️ for Chevy S10 owners everywhere 🚛
