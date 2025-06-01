@@ -21,10 +21,26 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("year", () => {
     return new Date().getFullYear();
   });
+  
+  // Add date filter for datetime attribute
+  eleventyConfig.addFilter("date", (dateObj, format) => {
+    const date = new Date(dateObj);
+    if (format === '%Y-%m-%d') {
+      return date.toISOString().split('T')[0];
+    }
+    return date.toISOString();
+  });
 
   // Add global data
   eleventyConfig.addGlobalData("currentYear", () => {
     return new Date().getFullYear();
+  });
+  
+  // Collections
+  eleventyConfig.addCollection("blog", function(collectionApi) {
+    return collectionApi.getFilteredByTag("blog").sort(function(a, b) {
+      return b.date - a.date; // Sort by date, newest first
+    });
   });
 
   return {
