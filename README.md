@@ -12,6 +12,15 @@ Built with Eleventy (11ty) v2.0.1 and Nunjucks templates.
 - Netlify-ready deployment
 - Blog with Markdown support
 
+## Documentation
+
+📚 **[View Full Documentation](./docs/README.md)**
+
+Key documentation includes:
+- [Deployment Issues & Solutions](./docs/deployment-issues.md)
+- [Nunjucks Quick Reference](./docs/nunjucks-quick-reference.md)
+- [AI Memory System](./AI/Memory/memory.json)
+
 ## Prerequisites
 
 - Node.js 14.x or higher
@@ -135,11 +144,22 @@ S10-Insurance/
 │   ├── 404.njk          # 404 error page
 │   ├── blog.njk         # Blog listing page
 │   └── index.njk        # Homepage
+├── docs/                # Technical documentation
+│   ├── README.md        # Documentation index
+│   ├── deployment-issues.md  # Common issues & solutions
+│   └── nunjucks-quick-reference.md  # Template syntax guide
+├── AI/
+│   └── Memory/
+│       └── memory.json  # AI knowledge base
 ├── .eleventy.js         # Eleventy configuration
 ├── netlify.toml         # Netlify configuration
 ├── package.json         # Project dependencies
 └── README.md            # This file
 ```
+
+## Important Notes
+
+⚠️ **Template Syntax**: This project uses **Nunjucks**, not Liquid. See [documentation](./docs/nunjucks-quick-reference.md) for syntax reference.
 
 ## Netlify Configuration
 
@@ -149,6 +169,13 @@ The `netlify.toml` file includes:
 - Custom 404 page handling
 - Security headers
 - Cache control headers for assets
+
+## Troubleshooting
+
+If you encounter deployment issues, please check:
+1. [Deployment Issues Documentation](./docs/deployment-issues.md)
+2. [AI Memory System](./AI/Memory/memory.json) for known patterns
+3. Test locally with `npm run build` before pushing
 
 ## License
 
