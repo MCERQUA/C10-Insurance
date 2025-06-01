@@ -1,0 +1,435 @@
+{# Component: section-hero-s10 #}
+{# Purpose: Hero section specifically for S10 Insurance with strong SEO focus #}
+{# Parameters: title, subtitle, ctaText, ctaLink #}
+
+<section class="c-hero-s10">
+  <div class="c-hero-s10__background">
+    <div class="c-hero-s10__grid"></div>
+    <div class="c-hero-s10__orb c-hero-s10__orb--1"></div>
+    <div class="c-hero-s10__orb c-hero-s10__orb--2"></div>
+    <div class="c-hero-s10__orb c-hero-s10__orb--3"></div>
+  </div>
+  
+  <div class="c-hero-s10__container">
+    <div class="c-hero-s10__content">
+      <h1 class="c-hero-s10__title">
+        {{ title | default("Specialized Insurance for Your Chevy S10 Pickup Truck") }}
+      </h1>
+      <p class="c-hero-s10__subtitle">
+        {{ subtitle | default("Expert Coverage for S10, S10 Blazer, and S10 ZR2 Owners Since 1982") }}
+      </p>
+      
+      <div class="c-hero-s10__features">
+        <div class="c-hero-s10__feature">
+          <svg class="c-hero-s10__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span>All S10 Models Covered</span>
+        </div>
+        <div class="c-hero-s10__feature">
+          <svg class="c-hero-s10__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span>Save up to 40%</span>
+        </div>
+        <div class="c-hero-s10__feature">
+          <svg class="c-hero-s10__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          <span>Instant S10 Quotes</span>
+        </div>
+      </div>
+      
+      <div class="c-hero-s10__cta-group">
+        <a href="{{ ctaLink | default('/quote') }}" class="c-hero-s10__cta c-hero-s10__cta--primary">
+          {{ ctaText | default("Get Your S10 Quote Now") }}
+          <svg class="c-hero-s10__cta-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+        <a href="/s10-coverage" class="c-hero-s10__cta c-hero-s10__cta--secondary">
+          View S10 Coverage Options
+        </a>
+      </div>
+      
+      <div class="c-hero-s10__trust">
+        <div class="c-hero-s10__trust-item">
+          <strong>15,000+</strong>
+          <span>S10s Insured</span>
+        </div>
+        <div class="c-hero-s10__trust-item">
+          <strong>4.9/5</strong>
+          <span>Owner Rating</span>
+        </div>
+        <div class="c-hero-s10__trust-item">
+          <strong>24/7</strong>
+          <span>S10 Support</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="c-hero-s10__visual">
+      <div class="c-hero-s10__truck-silhouette">
+        <svg viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 120 L80 100 L150 100 L180 80 L280 80 L300 100 L350 100 L350 140 L320 140 L310 150 L290 150 L280 140 L120 140 L110 150 L90 150 L80 140 L50 140 Z" 
+                fill="url(#s10-gradient)" 
+                stroke="url(#s10-stroke)" 
+                stroke-width="2"
+                opacity="0.8"/>
+          <circle cx="100" cy="150" r="15" fill="none" stroke="url(#wheel-gradient)" stroke-width="3"/>
+          <circle cx="300" cy="150" r="15" fill="none" stroke="url(#wheel-gradient)" stroke-width="3"/>
+          <defs>
+            <linearGradient id="s10-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#1e5ba8;stop-opacity:0.2" />
+              <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:0.1" />
+            </linearGradient>
+            <linearGradient id="s10-stroke" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#3b82f6" />
+              <stop offset="50%" style="stop-color:#14b8a6" />
+              <stop offset="100%" style="stop-color:#06b6d4" />
+            </linearGradient>
+            <linearGradient id="wheel-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#60a5fa" />
+              <stop offset="100%" style="stop-color:#14b8a6" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="c-hero-s10__badge">
+        <span class="c-hero-s10__badge-text">S10 Specialist</span>
+        <span class="c-hero-s10__badge-year">Since 1999</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .c-hero-s10 {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #050714;
+  }
+
+  .c-hero-s10__background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .c-hero-s10__grid {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 20s linear infinite;
+  }
+
+  @keyframes gridMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+  }
+
+  .c-hero-s10__orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.3;
+    animation: orbFloat 20s ease-in-out infinite;
+  }
+
+  .c-hero-s10__orb--1 {
+    width: 600px;
+    height: 600px;
+    background: #3b82f6;
+    top: -300px;
+    left: -300px;
+    animation-duration: 25s;
+  }
+
+  .c-hero-s10__orb--2 {
+    width: 400px;
+    height: 400px;
+    background: #14b8a6;
+    bottom: -200px;
+    right: -200px;
+    animation-duration: 30s;
+  }
+
+  .c-hero-s10__orb--3 {
+    width: 500px;
+    height: 500px;
+    background: #1e5ba8;
+    top: 50%;
+    left: 70%;
+    animation-duration: 20s;
+  }
+
+  @keyframes orbFloat {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(100px, -100px) scale(1.1); }
+    66% { transform: translate(-100px, 100px) scale(0.9); }
+  }
+
+  .c-hero-s10__container {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .c-hero-s10__content {
+    max-width: 600px;
+  }
+
+  .c-hero-s10__title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #ffffff 0%, #60a5fa 50%, #14b8a6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  .c-hero-s10__subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .c-hero-s10__features {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .c-hero-s10__feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #14b8a6;
+    font-weight: 500;
+  }
+
+  .c-hero-s10__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .c-hero-s10__cta-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .c-hero-s10__cta {
+    padding: 1.25rem 2.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .c-hero-s10__cta--primary {
+    background: linear-gradient(135deg, #1e5ba8 0%, #3b82f6 100%);
+    color: #ffffff;
+    box-shadow: 
+      0 4px 15px rgba(59, 130, 246, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  .c-hero-s10__cta--primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+  }
+
+  .c-hero-s10__cta--primary:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 
+      0 10px 30px rgba(59, 130, 246, 0.6),
+      0 0 60px rgba(59, 130, 246, 0.4);
+  }
+
+  .c-hero-s10__cta--primary:hover::before {
+    left: 100%;
+  }
+
+  .c-hero-s10__cta--secondary {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #14b8a6;
+    border: 1px solid rgba(20, 184, 166, 0.3);
+  }
+
+  .c-hero-s10__cta--secondary:hover {
+    background: rgba(20, 184, 166, 0.1);
+    border-color: rgba(20, 184, 166, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px 0 rgba(20, 184, 166, 0.3);
+  }
+
+  .c-hero-s10__cta-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .c-hero-s10__trust {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .c-hero-s10__trust-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .c-hero-s10__trust-item strong {
+    font-size: 1.75rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #60a5fa 0%, #14b8a6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .c-hero-s10__trust-item span {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .c-hero-s10__visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .c-hero-s10__truck-silhouette {
+    width: 100%;
+    max-width: 500px;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  .c-hero-s10__badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(20, 184, 166, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(20, 184, 166, 0.3);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .c-hero-s10__badge-text {
+    font-weight: 600;
+    color: #14b8a6;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.875rem;
+  }
+
+  .c-hero-s10__badge-year {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  @media (max-width: 968px) {
+    .c-hero-s10__container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .c-hero-s10__content {
+      max-width: 100%;
+    }
+
+    .c-hero-s10__features {
+      justify-content: center;
+    }
+
+    .c-hero-s10__cta-group {
+      justify-content: center;
+    }
+
+    .c-hero-s10__trust {
+      justify-content: center;
+    }
+
+    .c-hero-s10__visual {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .c-hero-s10__title {
+      font-size: 2rem;
+    }
+
+    .c-hero-s10__subtitle {
+      font-size: 1.125rem;
+    }
+
+    .c-hero-s10__features {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .c-hero-s10__cta {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .c-hero-s10__trust {
+      gap: 2rem;
+    }
+  }
+</style>
