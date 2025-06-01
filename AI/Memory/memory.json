@@ -1,0 +1,142 @@
+{
+  "project": {
+    "name": "S10 Insurance Website",
+    "framework": "Eleventy (11ty) v2.0.1",
+    "templateEngine": "Nunjucks",
+    "deployment": "Netlify",
+    "repository": "https://github.com/MCERQUA/S10-Insurance"
+  },
+  
+  "criticalKnowledge": {
+    "templateSyntax": {
+      "rule": "ALWAYS use Nunjucks syntax, NEVER use Liquid syntax",
+      "examples": {
+        "filters": {
+          "correct": "{{ variable | filterName(arg1, arg2) }}",
+          "incorrect": "{{ variable | filterName: arg1, arg2 }}"
+        },
+        "dateFilter": {
+          "correct": "{{ date | date('%Y-%m-%d') }}",
+          "incorrect": "{{ date | date: '%Y-%m-%d' }}"
+        }
+      }
+    },
+    
+    "fileExtensions": {
+      "templates": ".njk",
+      "markdown": ".md",
+      "data": ".json"
+    },
+    
+    "projectStructure": {
+      "source": "src/",
+      "output": "_site/",
+      "layouts": "src/_layouts/",
+      "includes": "src/_includes/",
+      "data": "src/_data/",
+      "blog": "src/blog/"
+    }
+  },
+  
+  "commonIssues": [
+    {
+      "issue": "Template render error: expected variable end",
+      "cause": "Using Liquid syntax (colon) instead of Nunjucks syntax (parentheses)",
+      "solution": "Change filter syntax from 'filterName: args' to 'filterName(args)'",
+      "preventiveMeasure": "Always use Nunjucks documentation as reference"
+    },
+    {
+      "issue": "Date formatting errors",
+      "cause": "Incorrect date filter syntax",
+      "solution": "Use custom date filter with parentheses: date('%Y-%m-%d')",
+      "preventiveMeasure": "Use dateReadable filter for display, date() for attributes"
+    }
+  ],
+  
+  "bestPractices": [
+    {
+      "category": "Templates",
+      "practices": [
+        "Always use .njk extension for Nunjucks templates",
+        "Use 'safe' filter for HTML content: {{ content | safe }}",
+        "Define reusable components in _includes folder",
+        "Use front matter for page metadata"
+      ]
+    },
+    {
+      "category": "Blog Posts",
+      "practices": [
+        "Place all blog posts in src/blog/ folder",
+        "Use .md extension for blog posts",
+        "Include required front matter: title, date, author, excerpt",
+        "Tag all posts with 'blog' tag for collections"
+      ]
+    },
+    {
+      "category": "Development",
+      "practices": [
+        "Test locally with 'npm run build' before pushing",
+        "Use 'npm start' for development with hot reload",
+        "Check Netlify build logs for deployment errors",
+        "Keep dependencies updated in package.json"
+      ]
+    }
+  ],
+  
+  "filters": {
+    "builtin": [
+      "safe - Marks content as safe HTML",
+      "dump - Outputs variable structure for debugging",
+      "first, last - Array operations",
+      "length - Get length of array or string"
+    ],
+    "custom": [
+      "dateReadable - Formats date as 'Month Day, Year'",
+      "date(format) - Formats date with custom format string",
+      "year - Returns current year"
+    ]
+  },
+  
+  "globalData": {
+    "site": {
+      "location": "src/_data/site.json",
+      "contains": "Site name, description, URL, metadata"
+    },
+    "currentYear": {
+      "location": ".eleventy.js",
+      "usage": "{{ currentYear }}"
+    }
+  },
+  
+  "deploymentChecklist": [
+    "Run 'npm run build' locally to test",
+    "Verify no template syntax errors",
+    "Check all date filters use Nunjucks syntax",
+    "Ensure all new files are committed",
+    "Push to GitHub main branch",
+    "Monitor Netlify dashboard for build status",
+    "Check deployed site for functionality"
+  ],
+  
+  "quickCommands": {
+    "development": "npm start",
+    "build": "npm run build",
+    "serve": "npm run serve",
+    "debug": "npm run debug"
+  },
+  
+  "resources": {
+    "nunjucks": "https://mozilla.github.io/nunjucks/",
+    "eleventy": "https://www.11ty.dev/",
+    "netlify": "https://docs.netlify.com/",
+    "projectRepo": "https://github.com/MCERQUA/S10-Insurance"
+  },
+  
+  "aiNotes": [
+    "This project uses Nunjucks, not Liquid - syntax is different",
+    "Always test template changes locally first",
+    "Date filters require special attention - use custom filters",
+    "Blog posts automatically build from markdown files",
+    "Netlify builds trigger on push to main branch"
+  ]
+}
