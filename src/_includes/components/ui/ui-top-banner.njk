@@ -1,0 +1,149 @@
+{# Component: ui-top-banner #}
+{# Purpose: Displays a call-to-action banner at the top of the page with phone number #}
+{# Parameters: 
+   - phoneNumber: Phone number to display (default: "844-967-5247")
+   - phoneText: Phone text to display (default: "844-WORK-247")
+   - message: Message to display (default: "FOR A QUICK QUOTE.")
+#}
+
+{% set phoneNumber = phoneNumber or "844-967-5247" %}
+{% set phoneText = phoneText or "844-WORK-247" %}
+{% set message = message or "FOR A QUICK QUOTE." %}
+
+<div class="c-top-banner">
+  <div class="c-top-banner__content">
+    <span class="c-top-banner__text">CALL</span>
+    <a href="tel:{{ phoneNumber }}" class="c-top-banner__phone">
+      <span class="c-top-banner__phone-number">{{ phoneNumber }}</span>
+      <span class="c-top-banner__phone-text">({{ phoneText }})</span>
+    </a>
+    <span class="c-top-banner__text">{{ message }}</span>
+  </div>
+</div>
+
+<style>
+.c-top-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #1e5ba8 0%, #3b82f6 50%, #14b8a6 100%);
+  padding: 0.75rem 1rem;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  animation: bannerSlideDown 0.5s ease-out;
+}
+
+@keyframes bannerSlideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.c-top-banner__content {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  letter-spacing: 0.05em;
+}
+
+.c-top-banner__text {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.c-top-banner__phone {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.c-top-banner__phone::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.c-top-banner__phone:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.c-top-banner__phone:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.c-top-banner__phone-number {
+  font-size: 1rem;
+}
+
+.c-top-banner__phone-text {
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .c-top-banner {
+    padding: 0.5rem;
+  }
+  
+  .c-top-banner__content {
+    font-size: 0.75rem;
+    gap: 0.25rem;
+  }
+  
+  .c-top-banner__phone {
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .c-top-banner__phone-number {
+    font-size: 0.875rem;
+  }
+  
+  .c-top-banner__phone-text {
+    font-size: 0.75rem;
+  }
+}
+
+/* Add padding to body to account for fixed banner */
+body {
+  padding-top: 50px;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding-top: 45px;
+  }
+}
+</style>
