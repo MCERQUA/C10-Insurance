@@ -8,16 +8,88 @@ This registry contains all available components for the S10 Insurance website. C
 ### 📦 Section Components
 Full-width page sections that stack vertically to create complete pages.
 
-#### section-hero
+#### section-hero-s10
+**Path**: `src/_includes/components/sections/section-hero-s10.njk`
+**Purpose**: Main hero section specifically for S10 Insurance with strong SEO focus
+**Parameters**:
+- `title` (string): Main headline - Default: "Specialized Insurance for Your Chevy S10 Pickup Truck"
+- `subtitle` (string): Supporting text - Default: "Expert Coverage for S10, S10 Blazer, and S10 ZR2 Owners Since 1982"
+- `ctaText` (string): Button text - Default: "Get Your S10 Quote Now"
+- `ctaLink` (string): Button URL - Default: "/quote"
+**Features**: Animated background, S10 truck silhouette, trust indicators
+**Usage**:
+```nunjucks
+{% include "components/sections/section-hero-s10.njk" %}
+```
+
+#### section-s10-models
+**Path**: `src/_includes/components/sections/section-s10-models.njk`
+**Purpose**: Showcase all S10 models and generations covered
+**Parameters**:
+- `title` (string): Section title - Default: "Every Chevy S10 Model Covered"
+**Features**: Timeline display of S10 generations, model variants, hover effects
+**Usage**:
+```nunjucks
+{% include "components/sections/section-s10-models.njk" %}
+```
+
+#### section-why-s10
+**Path**: `src/_includes/components/sections/section-why-s10.njk`
+**Purpose**: Explain why specialized S10 insurance matters
+**Parameters**:
+- `title` (string): Section title - Default: "Why Choose Specialized S10 Insurance?"
+**Features**: Reason cards, comparison table, animated hover effects
+**Usage**:
+```nunjucks
+{% include "components/sections/section-why-s10.njk" %}
+```
+
+#### section-coverage-grid
+**Path**: `src/_includes/components/sections/section-coverage-grid.njk`
+**Purpose**: Display S10-specific coverage features in a modern grid
+**Parameters**:
+- `title` (string): Section title - Default: "Comprehensive S10 Coverage Options"
+- `subtitle` (string): Section subtitle - Default: "Tailored protection for every S10 owner - from daily drivers to show trucks"
+**Features**: Coverage cards, pricing display, included features list
+**Usage**:
+```nunjucks
+{% include "components/sections/section-coverage-grid.njk" %}
+```
+
+#### section-s10-stats
+**Path**: `src/_includes/components/sections/section-s10-stats.njk`
+**Purpose**: Display impressive S10 insurance statistics
+**Parameters**:
+- `title` (string): Section title - Default: "S10 Insurance by the Numbers"
+**Features**: Animated numbers, 3D grid background, trust badges
+**Usage**:
+```nunjucks
+{% include "components/sections/section-s10-stats.njk" %}
+```
+
+#### section-cta-s10
+**Path**: `src/_includes/components/sections/section-cta-s10.njk`
+**Purpose**: Strong call to action for S10 insurance quotes
+**Parameters**:
+- `title` (string): CTA title - Default: "Ready to Save on Your S10 Insurance?"
+- `subtitle` (string): CTA subtitle - Default: "Join thousands of S10 owners who trust us with their trucks. Get your personalized quote in minutes."
+- `primaryCta` (object): Primary button config with `text` and `link`
+- `secondaryCta` (object): Secondary button config with `text` and `phone`
+**Features**: Animated S10 truck graphic, dual CTAs, trust indicators
+**Usage**:
+```nunjucks
+{% include "components/sections/section-cta-s10.njk" %}
+```
+
+#### section-hero (Original)
 **Path**: `src/_includes/components/sections/section-hero.njk`
-**Purpose**: Main hero section with headline, subtitle, and CTA
+**Purpose**: Generic hero section (use section-hero-s10 for S10-specific pages)
 **Parameters**:
 - `title` (string): Main headline
 - `subtitle` (string): Supporting text
 - `ctaText` (string): Button text
 - `ctaLink` (string): Button URL
 - `backgroundImage` (string, optional): Hero background
-
 **Usage**:
 ```nunjucks
 {% set heroData = {
@@ -29,7 +101,7 @@ Full-width page sections that stack vertically to create complete pages.
 {% include "components/sections/section-hero.njk" %}
 ```
 
-#### section-features
+#### section-features (Original)
 **Path**: `src/_includes/components/sections/section-features.njk`
 **Purpose**: Feature grid showcasing services or benefits
 **Parameters**:
@@ -38,7 +110,6 @@ Full-width page sections that stack vertically to create complete pages.
   - `icon` (string): Icon class or image
   - `title` (string): Feature title
   - `description` (string): Feature description
-
 **Usage**:
 ```nunjucks
 {% set featuresData = {
@@ -65,7 +136,6 @@ Smaller, reusable interface elements.
 - `link` (string): Button URL
 - `variant` (string): 'primary', 'secondary', 'outline'
 - `size` (string): 'small', 'medium', 'large'
-
 **Usage**:
 ```nunjucks
 {% set buttonData = {
@@ -115,9 +185,13 @@ Structural components for page layout.
 {# Purpose: [what this component does] #}
 {# Parameters: list all parameters #}
 
-<div class="component-[name]">
+<div class="c-[component-name]">
   {# Component markup #}
 </div>
+
+<style>
+  /* Component styles */
+</style>
 ```
 
 ### 3. After Creating a Component
@@ -129,15 +203,17 @@ Structural components for page layout.
 
 ## Component Composition Examples
 
-### Homepage Composition
+### S10 Insurance Homepage
 ```nunjucks
-{% include "components/sections/section-hero.njk" %}
-{% include "components/sections/section-features.njk" %}
-{% include "components/sections/section-testimonials.njk" %}
-{% include "components/sections/section-cta.njk" %}
+{% include "components/sections/section-hero-s10.njk" %}
+{% include "components/sections/section-s10-models.njk" %}
+{% include "components/sections/section-why-s10.njk" %}
+{% include "components/sections/section-coverage-grid.njk" %}
+{% include "components/sections/section-s10-stats.njk" %}
+{% include "components/sections/section-cta-s10.njk" %}
 ```
 
-### Service Page Composition
+### Generic Service Page
 ```nunjucks
 {% include "components/sections/section-page-header.njk" %}
 {% include "components/sections/section-service-grid.njk" %}
@@ -147,23 +223,19 @@ Structural components for page layout.
 ```
 
 ## Pending Components (To Be Created)
-
 1. **section-testimonials**: Customer testimonial carousel
-2. **section-cta**: Call-to-action section
-3. **section-contact**: Contact form section
-4. **section-faq**: Frequently asked questions
-5. **ui-form**: Form elements
-6. **ui-modal**: Modal/popup component
+2. **section-s10-faq**: S10-specific frequently asked questions
+3. **section-quote-form**: Insurance quote form section
+4. **ui-form**: Form elements
+5. **ui-modal**: Modal/popup component
 
 ## Component Maintenance
-
 - Review monthly for unused components
 - Refactor similar components into single flexible component
 - Keep documentation in sync with actual components
 - Version major component changes
 
 ---
-
-**Last Updated**: [Current Date]
-**Total Components**: 0 (Starting fresh)
-**Next Review**: [One month from creation]
+**Last Updated**: June 1, 2025
+**Total Components**: 11 (6 S10-specific, 5 generic)
+**Next Review**: July 1, 2025
