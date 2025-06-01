@@ -16,6 +16,16 @@ module.exports = function(eleventyConfig) {
       day: 'numeric'
     });
   });
+  
+  // Add year filter
+  eleventyConfig.addFilter("year", () => {
+    return new Date().getFullYear();
+  });
+
+  // Add global data
+  eleventyConfig.addGlobalData("currentYear", () => {
+    return new Date().getFullYear();
+  });
 
   return {
     dir: {
