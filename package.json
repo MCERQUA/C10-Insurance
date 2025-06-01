@@ -1,0 +1,24 @@
+{
+  "name": "s10-insurance",
+  "version": "1.0.0",
+  "description": "S10 Insurance website built with Eleventy",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "watch": "eleventy --watch",
+    "serve": "eleventy --serve",
+    "debug": "DEBUG=* eleventy"
+  },
+  "keywords": [
+    "eleventy",
+    "site",
+    "insurance"
+  ],
+  "author": "S10 Digital",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {}
+}
