@@ -1,32 +1,41 @@
 ---
 layout: base.njk
-title: Home
+title: S10 Insurance - Specialized Coverage for Chevy S10 Pickup Trucks
+description: Get specialized insurance for your Chevy S10 pickup truck. We cover all S10 models from 1982-2004 including S10 Blazer, ZR2, SS, and Xtreme. Save up to 40% with S10-specific coverage.
+keywords: S10 insurance, Chevy S10 insurance, S10 pickup insurance, S10 truck insurance, S10 Blazer insurance, S10 ZR2 insurance, Chevrolet S10 insurance
 ---
 
-<section class="hero">
-  <div class="container">
-    <h1>Welcome to {{ site.name }}</h1>
-    <p class="lead">{{ site.description }}</p>
-    <a href="/services/" class="cta-button">Explore Our Services</a>
-  </div>
-</section>
+{# Include all the S10-specific sections for the home page #}
 
-<section class="features">
-  <div class="container">
-    <h2>Why Choose S10 Insurance?</h2>
-    <div class="feature-grid">
-      <div class="feature">
-        <h3>Comprehensive Coverage</h3>
-        <p>We offer a wide range of insurance products to meet all your needs.</p>
-      </div>
-      <div class="feature">
-        <h3>Competitive Rates</h3>
-        <p>Get the best value for your money with our competitive pricing.</p>
-      </div>
-      <div class="feature">
-        <h3>Expert Support</h3>
-        <p>Our experienced team is here to help you every step of the way.</p>
-      </div>
+{% include "components/sections/section-hero-s10.njk" %}
+
+{% include "components/sections/section-s10-models.njk" %}
+
+{% include "components/sections/section-why-s10.njk" %}
+
+{% include "components/sections/section-coverage-grid.njk" %}
+
+{% include "components/sections/section-s10-stats.njk" %}
+
+{% include "components/sections/section-cta-s10.njk" %}
+
+{# Additional SEO content for S10 insurance #}
+<section class="seo-content" style="padding: 4rem 0; background: #050714;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+    <h2 style="font-size: 2rem; margin-bottom: 2rem; color: #ffffff;">Chevy S10 Insurance Specialists</h2>
+    <div style="color: rgba(255, 255, 255, 0.7); line-height: 1.8;">
+      <p style="margin-bottom: 1.5rem;">
+        Since 1999, S10 Insurance has been the trusted choice for Chevrolet S10 owners seeking specialized coverage for their trucks. Whether you drive a classic first-generation S10 from the 1980s or a final-edition 2004 model, we understand the unique insurance needs of S10 pickup truck owners.
+      </p>
+      <p style="margin-bottom: 1.5rem;">
+        Our S10-specific insurance policies cover all variants including the S10 Regular Cab, Extended Cab, S10 Blazer, S10 ZR2 off-road edition, S10 SS performance model, and S10 Xtreme. We're the only insurance company that specializes exclusively in Chevy S10 trucks, giving us unmatched expertise in valuation, parts sourcing, and claims handling for these vehicles.
+      </p>
+      <p style="margin-bottom: 1.5rem;">
+        S10 owners choose us because we understand modifications common to S10s, from lift kits and engine swaps to custom wheels and performance upgrades. Our policies don't exclude these modifications like generic insurers do. We also maintain relationships with S10 parts suppliers nationwide, ensuring you get quality OEM or aftermarket parts when you need them.
+      </p>
+      <p>
+        Get your free S10 insurance quote today and join thousands of S10 owners who trust us with their trucks. With average savings of 40% compared to standard truck insurance, specialized S10 coverage, and 24/7 support from S10 experts, we're the smart choice for Chevy S10 insurance.
+      </p>
     </div>
   </div>
 </section>
