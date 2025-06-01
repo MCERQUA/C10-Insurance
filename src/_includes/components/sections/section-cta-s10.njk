@@ -141,15 +141,21 @@
   .c-cta-s10__gradient {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, #050714 0%, rgba(30, 91, 168, 0.2) 50%, rgba(20, 184, 166, 0.1) 100%);
+    background: linear-gradient(135deg, 
+      rgba(5, 7, 20, 0.98) 0%, 
+      rgba(15, 23, 42, 0.95) 25%,
+      rgba(30, 41, 59, 0.9) 50%,
+      rgba(30, 64, 175, 0.4) 75%,
+      rgba(20, 184, 166, 0.3) 100%);
   }
 
   .c-cta-s10__pattern {
     position: absolute;
     inset: 0;
     background-image: 
-      radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 50%, rgba(20, 184, 166, 0.1) 0%, transparent 50%);
+      radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, rgba(20, 184, 166, 0.15) 0%, transparent 50%);
+    opacity: 0.5;
   }
 
   .c-cta-s10__container {
@@ -177,13 +183,15 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
   }
 
   .c-cta-s10__subtitle {
     font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
     line-height: 1.6;
     margin-bottom: 2rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   }
 
   .c-cta-s10__benefits {
@@ -199,11 +207,13 @@
     gap: 0.5rem;
     color: #14b8a6;
     font-weight: 500;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   }
 
   .c-cta-s10__benefit-icon {
     width: 20px;
     height: 20px;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
   }
 
   .c-cta-s10__actions {
@@ -260,15 +270,16 @@
   }
 
   .c-cta-s10__btn--secondary {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     color: #14b8a6;
-    border: 2px solid rgba(20, 184, 166, 0.3);
+    border: 2px solid rgba(20, 184, 166, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   }
 
   .c-cta-s10__btn--secondary:hover {
-    background: rgba(20, 184, 166, 0.1);
-    border-color: rgba(20, 184, 166, 0.5);
+    background: rgba(20, 184, 166, 0.2);
+    border-color: rgba(20, 184, 166, 0.7);
     transform: translateY(-3px);
     box-shadow: 0 15px 35px rgba(20, 184, 166, 0.4);
   }
@@ -279,8 +290,9 @@
   }
 
   .c-cta-s10__or {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.7);
     font-style: italic;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   }
 
   .c-cta-s10__trust {
@@ -293,14 +305,15 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 0.875rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   }
 
   .c-cta-s10__trust-icon {
     width: 20px;
     height: 20px;
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.6);
   }
 
   .c-cta-s10__visual {
@@ -314,6 +327,7 @@
     width: 100%;
     max-width: 500px;
     animation: float 6s ease-in-out infinite;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
   }
 
   @keyframes float {
@@ -372,6 +386,7 @@
     font-size: 2.5rem;
     font-weight: 900;
     line-height: 1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
 
   .c-cta-s10__badge-text {
