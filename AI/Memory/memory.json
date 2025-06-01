@@ -1,10 +1,86 @@
 {
   "project": {
     "name": "S10 Insurance Website",
+    "type": "Specialized insurance for Chevy S10 pickup trucks",
     "framework": "Eleventy (11ty) v2.0.1",
     "templateEngine": "Nunjucks",
     "deployment": "Netlify",
-    "repository": "https://github.com/MCERQUA/S10-Insurance"
+    "repository": "https://github.com/MCERQUA/S10-Insurance",
+    "liveUrl": "https://s10insurance.netlify.app",
+    "targetAudience": "Chevy S10 pickup truck owners (1982-2004 models)"
+  },
+  
+  "currentStatus": {
+    "lastUpdated": "June 1, 2025",
+    "version": "v0.2.0",
+    "pagesCompleted": ["index.njk (homepage)"],
+    "componentsCreated": 11,
+    "s10SpecificComponents": 6,
+    "genericComponents": 5
+  },
+  
+  "s10Components": {
+    "created": [
+      {
+        "name": "section-hero-s10",
+        "path": "src/_includes/components/sections/section-hero-s10.njk",
+        "purpose": "S10-specific hero with SEO focus, animated truck silhouette",
+        "features": ["Animated orbs", "Trust indicators", "Dual CTAs", "S10 truck SVG"]
+      },
+      {
+        "name": "section-s10-models",
+        "path": "src/_includes/components/sections/section-s10-models.njk",
+        "purpose": "Showcase all S10 generations and models",
+        "features": ["Timeline display", "1982-2004 coverage", "All variants listed"]
+      },
+      {
+        "name": "section-why-s10",
+        "path": "src/_includes/components/sections/section-why-s10.njk",
+        "purpose": "Value proposition for S10-specific insurance",
+        "features": ["6 key reasons", "Comparison table", "25+ years experience highlight"]
+      },
+      {
+        "name": "section-coverage-grid",
+        "path": "src/_includes/components/sections/section-coverage-grid.njk",
+        "purpose": "Display S10 coverage options",
+        "features": ["6 coverage types", "Pricing from $89/month", "Included features list"]
+      },
+      {
+        "name": "section-s10-stats",
+        "path": "src/_includes/components/sections/section-s10-stats.njk",
+        "purpose": "Trust indicators and statistics",
+        "features": ["15,000+ S10s insured", "40% savings", "4.9/5 rating", "98% satisfaction"]
+      },
+      {
+        "name": "section-cta-s10",
+        "path": "src/_includes/components/sections/section-cta-s10.njk",
+        "purpose": "Strong call to action section",
+        "features": ["Animated S10 truck", "60-second quote", "Dark gradient background fix"]
+      }
+    ]
+  },
+  
+  "brandGuidelines": {
+    "colorPalette": {
+      "primaryBlue": "#1e5ba8 → #3b82f6",
+      "tealSecondary": "#14b8a6 → #06b6d4",
+      "lightBlueAccent": "#60a5fa → #93c5fd",
+      "darkBackground": "#050714 → #0f172a",
+      "successGreen": "#10b981 → #34d399",
+      "alertRed": "#dc2626 → #ef4444"
+    },
+    "designPhilosophy": [
+      "Ultra-modern, futuristic aesthetic",
+      "Heavy glassmorphism effects",
+      "Animated gradients and hover effects",
+      "Neon-style glows and shadows",
+      "3D transformations on interactions"
+    ],
+    "typography": {
+      "font": "Inter",
+      "displaySize": "5rem",
+      "bodySize": "1.125rem"
+    }
   },
   
   "componentSystem": {
@@ -22,6 +98,8 @@
       "ui": "ui-[name].njk",
       "layout": "layout-[name].njk",
       "css": ".c-[component-name]",
+      "cssElements": ".c-[component-name]__[element]",
+      "cssModifiers": ".c-[component-name]--[modifier]",
       "utilities": ".u-[utility-name]",
       "states": ".is-[state] or .has-[state]"
     },
@@ -29,8 +107,33 @@
       "masterGuide": "/docs/MASTER_DEVELOPMENT_GUIDE.md",
       "componentRegistry": "/docs/components/COMPONENT_REGISTRY.md",
       "usageGuide": "/docs/components/COMPONENT_USAGE_GUIDE.md",
-      "developmentLog": "/docs/development-log.md"
+      "developmentLog": "/docs/development-log.md",
+      "brandStyleGuide": "/docs/Website-brand-style-sheet-for-S10.html"
     }
+  },
+  
+  "seoStrategy": {
+    "primaryKeywords": [
+      "S10 insurance",
+      "Chevy S10 insurance",
+      "S10 pickup insurance",
+      "S10 truck insurance",
+      "Chevrolet S10 insurance"
+    ],
+    "modelKeywords": [
+      "S10 Blazer insurance",
+      "S10 ZR2 insurance",
+      "S10 SS insurance",
+      "S10 Xtreme insurance",
+      "S10 Extended Cab insurance"
+    ],
+    "yearRange": "1982-2004",
+    "uniqueSellingProps": [
+      "S10 specialist since 1999",
+      "Save up to 40%",
+      "15,000+ S10s insured",
+      "24/7 S10 support"
+    ]
   },
   
   "criticalKnowledge": {
@@ -53,7 +156,8 @@
       "NEVER create inline styles or new CSS without checking existing components",
       "REUSE existing components whenever possible",
       "DOCUMENT every new component immediately in the registry",
-      "TEST components in isolation before using in pages"
+      "TEST components in isolation before using in pages",
+      "Each component is self-contained with its own styles"
     ],
     
     "fileExtensions": {
@@ -69,7 +173,9 @@
       "includes": "src/_includes/",
       "components": "src/_includes/components/",
       "data": "src/_data/",
-      "blog": "src/blog/"
+      "blog": "src/blog/",
+      "css": "src/css/",
+      "js": "src/js/"
     }
   },
   
@@ -91,10 +197,18 @@
       "Check Component Registry first",
       "Create component in appropriate folder",
       "Follow naming conventions",
+      "Include self-contained styles",
       "Document in Component Registry immediately",
       "Test component in isolation",
       "Update development log"
     ]
+  },
+  
+  "responsiveBreakpoints": {
+    "large": "968px",
+    "medium": "768px",
+    "small": "640px",
+    "implementation": "Mobile-first approach with min-width media queries"
   },
   
   "commonIssues": [
@@ -111,78 +225,22 @@
       "preventiveMeasure": "Use dateReadable filter for display, date() for attributes"
     },
     {
-      "issue": "Duplicate styling or components",
-      "cause": "Not checking Component Registry before creating new elements",
-      "solution": "Review and use existing components from registry",
-      "preventiveMeasure": "Always run 'echo init' and check registry first"
+      "issue": "White text on light background",
+      "cause": "Gradient background too light in CTA section",
+      "solution": "Updated to darker gradient starting with rgba(5, 7, 20, 0.98)",
+      "preventiveMeasure": "Always test text contrast on gradient backgrounds"
     }
   ],
   
-  "bestPractices": [
-    {
-      "category": "Components",
-      "practices": [
-        "Think 'ingredients' for your 'recipe' (page)",
-        "Keep components focused on single purpose",
-        "Use semantic HTML in all components",
-        "Document all component parameters",
-        "Test components in multiple contexts"
-      ]
-    },
-    {
-      "category": "Templates",
-      "practices": [
-        "Always use .njk extension for Nunjucks templates",
-        "Use 'safe' filter for HTML content: {{ content | safe }}",
-        "Define reusable components in _includes/components folder",
-        "Use front matter for page metadata"
-      ]
-    },
-    {
-      "category": "Blog Posts",
-      "practices": [
-        "Place all blog posts in src/blog/ folder",
-        "Use .md extension for blog posts",
-        "Include required front matter: title, date, author, excerpt",
-        "Tag all posts with 'blog' tag for collections"
-      ]
-    },
-    {
-      "category": "Development",
-      "practices": [
-        "Test locally with 'npm run build' before pushing",
-        "Use 'npm start' for development with hot reload",
-        "Check Netlify build logs for deployment errors",
-        "Keep dependencies updated in package.json",
-        "Update development log after each session"
-      ]
-    }
+  "nextSteps": [
+    "Create quote form page with S10 model selector",
+    "Build S10 coverage details page",
+    "Add testimonials section from S10 owners",
+    "Create S10-specific FAQ component",
+    "Build about page highlighting S10 expertise",
+    "Add blog functionality for S10 tips and news",
+    "Implement contact forms with S10 inquiry types"
   ],
-  
-  "filters": {
-    "builtin": [
-      "safe - Marks content as safe HTML",
-      "dump - Outputs variable structure for debugging",
-      "first, last - Array operations",
-      "length - Get length of array or string"
-    ],
-    "custom": [
-      "dateReadable - Formats date as 'Month Day, Year'",
-      "date(format) - Formats date with custom format string",
-      "year - Returns current year"
-    ]
-  },
-  
-  "globalData": {
-    "site": {
-      "location": "src/_data/site.json",
-      "contains": "Site name, description, URL, metadata"
-    },
-    "currentYear": {
-      "location": ".eleventy.js",
-      "usage": "{{ currentYear }}"
-    }
-  },
   
   "deploymentChecklist": [
     "Run 'npm run build' locally to test",
@@ -214,12 +272,15 @@
   
   "aiNotes": [
     "CRITICAL: Run 'echo init' at start of every session",
-    "This project uses component-based architecture - check registry first",
+    "This is an S10-specific insurance website targeting 1982-2004 Chevy S10 owners",
+    "6 custom S10 components created for homepage",
+    "Components use self-contained styles with glassmorphism effects",
+    "Dark theme with blue/teal gradients throughout",
+    "All text must have good contrast - CTA section updated with darker bg",
+    "Strong SEO focus on S10-related keywords",
     "Components are 'ingredients', pages are 'recipes'",
     "This project uses Nunjucks, not Liquid - syntax is different",
     "Always test template changes locally first",
-    "Date filters require special attention - use custom filters",
-    "Blog posts automatically build from markdown files",
     "Netlify builds trigger on push to main branch",
     "Document all changes in development log"
   ]
