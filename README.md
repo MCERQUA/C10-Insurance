@@ -10,6 +10,7 @@ Built with Eleventy (11ty) v2.0.1 and Nunjucks templates.
 - Fast build times
 - SEO optimized
 - Netlify-ready deployment
+- Blog with Markdown support
 
 ## Prerequisites
 
@@ -46,6 +47,41 @@ npm run build
 ```
 
 The built site will be in the `_site` directory.
+
+## Blog Management
+
+The blog section automatically includes any Markdown files in the `/src/blog/` folder.
+
+### Adding a New Blog Post
+
+1. Create a new `.md` file in `/src/blog/`
+2. Add front matter at the top of the file:
+
+```markdown
+---
+title: Your Blog Post Title
+date: 2025-06-01
+author: Author Name
+excerpt: A brief summary of your post
+tags:
+  - insurance
+  - tips
+---
+
+Your blog post content goes here...
+```
+
+3. The blog post will automatically appear on the blog page after the next build
+
+### Blog Features
+
+- Automatic listing on `/blog/` page
+- Individual post pages with clean URLs
+- Tag support
+- Author attribution
+- Publication dates
+- Pagination (10 posts per page)
+- Responsive design
 
 ## Deployment to Netlify
 
@@ -89,11 +125,15 @@ S10-Insurance/
 │   ├── _includes/       # Partial templates
 │   ├── _layouts/        # Page layouts
 │   ├── _data/           # Global data files
+│   ├── blog/            # Blog posts (Markdown files)
+│   │   ├── blog.json    # Blog configuration
+│   │   └── *.md         # Individual blog posts
 │   ├── assets/          # Static assets
 │   ├── css/             # Stylesheets
 │   ├── js/              # JavaScript files
 │   ├── images/          # Images
 │   ├── 404.njk          # 404 error page
+│   ├── blog.njk         # Blog listing page
 │   └── index.njk        # Homepage
 ├── .eleventy.js         # Eleventy configuration
 ├── netlify.toml         # Netlify configuration
