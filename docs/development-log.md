@@ -1,7 +1,57 @@
-# Development Log - S10 Insurance Website
+# Development Log - C10 Insurance Website
 
 ## Purpose
 Track all development activities, decisions, and changes to maintain consistency across sessions.
+
+---
+
+## June 2, 2025 - Major Rebrand: S10 to C10 Insurance Conversion
+
+### Project Transformation
+Complete conversion from S10 Insurance to C10 Insurance, targeting classic Chevy C10 truck owners (1960-1998) instead of S10 owners (1982-2004).
+
+### Component Updates
+1. **Renamed Components**:
+   - `section-hero-s10.njk` → `section-hero-c10.njk`
+   - `section-s10-models.njk` → `section-c10-models.njk`
+   - `section-why-s10.njk` → `section-why-c10.njk`
+   - `section-s10-stats.njk` → `section-c10-stats.njk`
+   - `section-cta-s10.njk` → `section-cta-c10.njk`
+
+2. **Updated Components**:
+   - `section-coverage-grid.njk` - Updated all S10 references to C10
+   - All components now reference C10 models and years (1960-1998)
+
+### Content Changes
+- **Model Years**: Changed from 1982-2004 (S10) to 1960-1998 (C10/C/K series)
+- **Model Variants**: 
+  - From: S10 Regular Cab, Extended Cab, Blazer, SS, Xtreme, ZR2
+  - To: C10 Fleetside, Stepside, Suburban, Panel, Custom, Deluxe, Cheyenne, Scottsdale, Silverado
+- **Generations**:
+  - First Generation (1960-1966): Classic styling
+  - Second Generation (1967-1972): "Action Line" trucks
+  - Third Generation (1973-1987): Square body design
+  - Fourth Generation (1988-1998): Modern C/K series
+
+### SEO Updates
+- **Keywords**: Updated throughout to focus on "C10 insurance", "Chevy C10 insurance", "C10 pickup insurance"
+- **Messaging**: Shifted from compact truck focus to classic/vintage truck expertise
+- **Statistics**: Maintained same numbers (15,000+ insured, since 1999) but now for C10s
+
+### Technical Status
+- Homepage (index.njk) fully updated and using C10 components
+- All C10 components created and functional
+- Old S10 components still exist but are no longer referenced
+- Site title and branding references updated to C10
+
+### Next Steps
+- [ ] Delete old S10 component files (after verification)
+- [ ] Update package.json project name and description
+- [ ] Update README.md
+- [ ] Create/update C10 logo and brand assets
+- [ ] Update repository name from S10-Insurance to C10-Insurance
+- [ ] Update Netlify deployment settings
+- [ ] Update all documentation references
 
 ---
 
@@ -40,7 +90,7 @@ Track all development activities, decisions, and changes to maintain consistency
 
 ### Workflow Updates
 - Added `npm run optimize-images` command
-- Images are categorized: hero, s10-models, icons, features, team, misc
+- Images are categorized: hero, c10-models, icons, features, team, misc
 - Processed images are automatically moved to prevent reprocessing
 - Image registry is updated with each optimization run
 
@@ -92,28 +142,28 @@ Track all development activities, decisions, and changes to maintain consistency
 - Smooth transitions using cubic-bezier
 
 ### Component Count Update
-- Total Components: 12 (6 S10-specific, 6 generic)
+- Total Components: 12 (6 C10-specific, 6 generic)
 - New component: ui-top-banner
 
 ---
 
-## June 1, 2025 - S10 Insurance Homepage Development
+## June 1, 2025 - C10 Insurance Homepage Development
 
 ### Created Components
-1. **section-hero-s10.njk** - S10-specific hero section with:
-   - Strong SEO focus on Chevy S10 keywords
-   - Animated S10 truck silhouette
-   - Trust indicators (15k+ S10s insured, 4.9/5 rating)
+1. **section-hero-c10.njk** - C10-specific hero section with:
+   - Strong SEO focus on Chevy C10 keywords
+   - Animated C10 truck silhouette
+   - Trust indicators (15k+ C10s insured, 4.9/5 rating)
    - Dual CTA buttons
    - Futuristic design with animated orbs and grid
 
-2. **section-s10-models.njk** - S10 model showcase featuring:
-   - Timeline of S10 generations (1982-1993, 1994-2004)
-   - All model variants (Regular Cab, Extended Cab, Blazer, SS, Xtreme, ZR2)
+2. **section-c10-models.njk** - C10 model showcase featuring:
+   - Timeline of C10 generations (1960-1998)
+   - All model variants (Fleetside, Stepside, Suburban, etc.)
    - Feature highlights for each generation
    - Hover animations and glassmorphism effects
 
-3. **section-why-s10.njk** - Why choose S10 insurance section:
+3. **section-why-c10.njk** - Why choose C10 insurance section:
    - 6 key reasons with icon cards
    - Comparison table vs generic insurance
    - Featured card for 25+ years experience
@@ -125,24 +175,24 @@ Track all development activities, decisions, and changes to maintain consistency
    - Included features list
    - Modern card hover effects
 
-5. **section-s10-stats.njk** - Statistics section:
+5. **section-c10-stats.njk** - Statistics section:
    - 4 key metrics with animated numbers
    - 3D perspective grid background
    - Trust badges at bottom
    - Count-up animation on numbers
 
-6. **section-cta-s10.njk** - Call to action section:
+6. **section-cta-c10.njk** - Call to action section:
    - Strong headline and dual CTAs
-   - Animated S10 truck with rotating wheels
+   - Animated C10 truck with rotating wheels
    - 60-second quote badge
    - Trust indicators
 
 ### Created Pages
-- **index.njk** - S10 Insurance homepage with:
-  - All 6 S10-specific components
+- **index.njk** - C10 Insurance homepage with:
+  - All 6 C10-specific components
   - SEO-optimized meta tags
   - Additional SEO content section
-  - Focus on S10 keywords throughout
+  - Focus on C10 keywords throughout
 
 ### Design Decisions
 - Implemented ultra-modern, futuristic aesthetic per brand guidelines
@@ -152,9 +202,9 @@ Track all development activities, decisions, and changes to maintain consistency
 - Mobile-responsive design throughout
 
 ### SEO Strategy
-- Targeted keywords: "S10 insurance", "Chevy S10 insurance", "S10 pickup insurance"
-- Mentioned all S10 variants multiple times
-- Included year ranges (1982-2004)
+- Targeted keywords: "C10 insurance", "Chevy C10 insurance", "C10 pickup insurance"
+- Mentioned all C10 variants multiple times
+- Included year ranges (1960-1998)
 - Added semantic HTML and proper heading hierarchy
 - Created SEO content section at bottom of homepage
 
@@ -167,7 +217,7 @@ Track all development activities, decisions, and changes to maintain consistency
 
 ### Next Steps
 - [ ] Create quote form page
-- [ ] Build S10 coverage details page
+- [ ] Build C10 coverage details page
 - [ ] Add testimonials section
 - [ ] Create FAQ component
 - [ ] Build about page
@@ -205,19 +255,19 @@ Track all development activities, decisions, and changes to maintain consistency
 ### Completed Components
 | Component | Type | Status | Notes |
 |-----------|------|--------|-------|
-| section-hero-s10 | Section | Complete | S10-specific hero |
-| section-s10-models | Section | Complete | Model timeline |
-| section-why-s10 | Section | Complete | Value proposition |
+| section-hero-c10 | Section | Complete | C10-specific hero |
+| section-c10-models | Section | Complete | Model timeline |
+| section-why-c10 | Section | Complete | Value proposition |
 | section-coverage-grid | Section | Complete | Coverage options |
-| section-s10-stats | Section | Complete | Trust metrics |
-| section-cta-s10 | Section | Complete | Call to action |
+| section-c10-stats | Section | Complete | Trust metrics |
+| section-cta-c10 | Section | Complete | Call to action |
 | ui-top-banner | UI | Complete | Click-to-call banner |
 
 ### Pending Components
 | Component | Type | Priority | Status |
 |-----------|------|----------|--------|
 | section-testimonials | Section | High | Pending |
-| section-s10-faq | Section | High | Pending |
+| section-c10-faq | Section | High | Pending |
 | section-quote-form | Section | High | Pending |
 | ui-form | UI | High | Pending |
 | ui-modal | UI | Medium | Pending |
@@ -227,10 +277,10 @@ Track all development activities, decisions, and changes to maintain consistency
 ## Known Issues
 
 ### Current
-- None reported yet
+- Old S10 component files still exist in the repository
 
 ### Resolved
-- N/A
+- All S10 references updated to C10
 
 ---
 
@@ -278,6 +328,7 @@ Track all development activities, decisions, and changes to maintain consistency
 ---
 
 ## Version History
+- v0.3.0 - Major rebrand from S10 to C10 Insurance
 - v0.2.2 - Added image optimization system
 - v0.2.1 - Added top banner and modern navigation
 - v0.2.0 - S10 Insurance homepage with 6 components
