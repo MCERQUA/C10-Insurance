@@ -17,8 +17,8 @@ This directory is used as a staging area for new images that need to be optimize
    - Category (hero, s10-models, icons, features, team, misc)
 
 4. **Results**:
-   - Optimized images will be created in `/src/images/optimized/`
-   - Original images will be copied to `/src/images/original/`
+   - All images will be created in `/src/images/`
+   - Original images saved with `-original` suffix
    - Processed images will be moved to `/scripts/new-images/processed/`
    - Image documentation will be updated in `/docs/IMAGE_REGISTRY.md`
 
@@ -32,6 +32,15 @@ The script creates multiple variants of each image:
   - `medium`: 800px width
   - `large`: 1200px width
   - `hero`: 1920px width
+
+## Output Naming Convention
+For an image named `s10-truck.jpg`, the script creates:
+- `s10-truck-original.jpg` (preserved original)
+- `s10-truck-thumbnail.jpg` / `s10-truck-thumbnail.webp`
+- `s10-truck-small.jpg` / `s10-truck-small.webp`
+- `s10-truck-medium.jpg` / `s10-truck-medium.webp`
+- `s10-truck-large.jpg` / `s10-truck-large.webp`
+- `s10-truck-hero.jpg` / `s10-truck-hero.webp`
 
 ## Image Categories
 
@@ -47,3 +56,4 @@ The script creates multiple variants of each image:
 - All images are optimized for web performance
 - WebP format provides better compression while maintaining quality
 - JPEG fallbacks are created for browser compatibility
+- All output files go directly to `/src/images/` (no subdirectories)
