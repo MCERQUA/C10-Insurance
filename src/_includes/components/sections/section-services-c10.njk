@@ -1,0 +1,324 @@
+{# Component: section-services-c10 #}
+{# Purpose: Display C10-specific insurance services in a modern grid #}
+{# Parameters: 
+   - title: Section title
+   - subtitle: Section subtitle
+#}
+
+<section class="c-services-c10">
+  <div class="c-services-c10__container">
+    <div class="c-services-c10__header">
+      <h2 class="c-services-c10__title">{{ title | default('C10 Insurance Services') }}</h2>
+      {% if subtitle %}
+      <p class="c-services-c10__subtitle">{{ subtitle }}</p>
+      {% endif %}
+    </div>
+    
+    <div class="c-services-c10__grid">
+      {# Classic C10 Coverage #}
+      <div class="c-services-c10__card c-services-c10__card--featured">
+        <div class="c-services-c10__icon">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 10 L50 20 L50 40 L32 50 L14 40 L14 20 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+            <path d="M32 20 L40 25 L40 35 L32 40 L24 35 L24 25 Z" fill="currentColor" opacity="0.3"/>
+          </svg>
+        </div>
+        <h3>Classic C10 Coverage</h3>
+        <p>Comprehensive protection designed specifically for 1960-1998 Chevy C10 pickups, including agreed value coverage and restoration protection.</p>
+        <ul class="c-services-c10__features">
+          <li>Agreed value coverage</li>
+          <li>Restoration in progress</li>
+          <li>Original parts coverage</li>
+          <li>Show truck protection</li>
+        </ul>
+        <span class="c-services-c10__badge">Most Popular</span>
+      </div>
+      
+      {# Daily Driver Protection #}
+      <div class="c-services-c10__card">
+        <div class="c-services-c10__icon">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="2" fill="none"/>
+            <path d="M32 12 L32 32 L44 44" stroke="currentColor" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+        <h3>Daily Driver Protection</h3>
+        <p>Full coverage for C10 owners who use their truck as primary transportation, with roadside assistance and rental coverage.</p>
+        <ul class="c-services-c10__features">
+          <li>24/7 roadside assistance</li>
+          <li>Rental truck coverage</li>
+          <li>Commute protection</li>
+          <li>Flexible deductibles</li>
+        </ul>
+      </div>
+      
+      {# Modified C10 Insurance #}
+      <div class="c-services-c10__card">
+        <div class="c-services-c10__icon">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 12 L22 22 L22 42 L32 52 L42 42 L42 22 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+            <circle cx="32" cy="32" r="5" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3>Modified C10 Insurance</h3>
+        <p>Specialized coverage for customized C10s, including engine swaps, suspension modifications, and aftermarket parts.</p>
+        <ul class="c-services-c10__features">
+          <li>Custom parts coverage</li>
+          <li>Engine swap protection</li>
+          <li>Performance upgrades</li>
+          <li>Custom paint & body</li>
+        </ul>
+      </div>
+      
+      {# Collector's Coverage #}
+      <div class="c-services-c10__card">
+        <div class="c-services-c10__icon">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 12 L42 17 L42 27 L32 32 L22 27 L22 17 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+            <path d="M32 32 L42 37 L42 47 L32 52 L22 47 L22 37 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+        <h3>Collector's Coverage</h3>
+        <p>Premium protection for rare and pristine C10s, with guaranteed value appreciation and show event coverage.</p>
+        <ul class="c-services-c10__features">
+          <li>Value appreciation</li>
+          <li>Show & event coverage</li>
+          <li>Storage protection</li>
+          <li>Transport coverage</li>
+        </ul>
+      </div>
+      
+      {# Fleet Coverage #}
+      <div class="c-services-c10__card">
+        <div class="c-services-c10__icon">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <rect x="16" y="18" width="12" height="12" stroke="currentColor" stroke-width="2" fill="none"/>
+            <rect x="26" y="28" width="12" height="12" stroke="currentColor" stroke-width="2" fill="none"/>
+            <rect x="36" y="38" width="12" height="12" stroke="currentColor" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+        <h3>Multi-C10 Fleet Coverage</h3>
+        <p>Discounted rates for collectors with multiple C10s, with flexible coverage options for each vehicle.</p>
+        <ul class="c-services-c10__features">
+          <li>Multi-truck discounts</li>
+          <li>Flexible usage</li>
+          <li>Single policy convenience</li>
+          <li>Mix & match coverage</li>
+        </ul>
+      </div>
+      
+      {# Commercial Use #}
+      <div class="c-services-c10__card">
+        <div class="c-services-c10__icon">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 24 L48 24 L48 48 L16 48 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+            <path d="M16 32 L48 32" stroke="currentColor" stroke-width="2"/>
+            <circle cx="24" cy="40" r="3" fill="currentColor"/>
+            <circle cx="40" cy="40" r="3" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3>Commercial C10 Use</h3>
+        <p>Business coverage for C10s used commercially, including food trucks, promotional vehicles, and work trucks.</p>
+        <ul class="c-services-c10__features">
+          <li>Commercial liability</li>
+          <li>Business equipment</li>
+          <li>Income protection</li>
+          <li>Employee coverage</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.c-services-c10 {
+  padding: 5rem 0;
+  position: relative;
+  background: linear-gradient(180deg, rgba(5, 7, 20, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%);
+  overflow: hidden;
+}
+
+.c-services-c10::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(20, 184, 166, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.c-services-c10__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.c-services-c10__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.c-services-c10__title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #ffffff 0%, #14b8a6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.c-services-c10__subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.c-services-c10__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.c-services-c10__card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.c-services-c10__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #14b8a6, transparent);
+  transition: left 0.5s;
+}
+
+.c-services-c10__card:hover {
+  transform: translateY(-10px) scale(1.02);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(20, 184, 166, 0.3);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.3),
+    0 0 100px rgba(20, 184, 166, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.c-services-c10__card:hover::before {
+  left: 100%;
+}
+
+.c-services-c10__card--featured {
+  background: linear-gradient(135deg, rgba(30, 91, 168, 0.1) 0%, rgba(20, 184, 166, 0.05) 100%);
+  border-color: rgba(20, 184, 166, 0.2);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.2),
+    0 0 60px rgba(20, 184, 166, 0.1);
+}
+
+.c-services-c10__icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1.5rem;
+  color: #14b8a6;
+  filter: drop-shadow(0 0 20px rgba(20, 184, 166, 0.5));
+}
+
+.c-services-c10__card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.c-services-c10__card p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.c-services-c10__features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.c-services-c10__features li {
+  padding-left: 1.5rem;
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+}
+
+.c-services-c10__features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #14b8a6;
+  font-weight: bold;
+}
+
+.c-services-c10__badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 0 20px rgba(20, 184, 166, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .c-services-c10__grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .c-services-c10__title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .c-services-c10 {
+    padding: 3rem 0;
+  }
+  
+  .c-services-c10__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .c-services-c10__card {
+    padding: 2rem;
+  }
+  
+  .c-services-c10__title {
+    font-size: 2rem;
+  }
+}
+</style>
