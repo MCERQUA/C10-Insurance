@@ -1,6 +1,6 @@
 # Components Directory
 
-This directory contains all reusable components for the S10 Insurance website.
+This directory contains all reusable components for the C10 Insurance website.
 
 ## Structure
 
