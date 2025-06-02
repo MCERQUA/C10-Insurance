@@ -1,11 +1,310 @@
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-content">
-      <p>&copy; {{ currentYear }} {{ site.name }}. All rights reserved.</p>
-      <nav class="footer-nav">
-        <a href="/privacy/">Privacy Policy</a>
-        <a href="/terms/">Terms of Service</a>
-      </nav>
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        {# Company Info #}
+        <div class="footer-section">
+          <h3 class="footer-title">{{ site.name }}</h3>
+          <p class="footer-desc">Specialized insurance coverage for 1960-1998 Chevy C10 pickup trucks. Protecting America's favorite classic trucks since 1999.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/c10insurance" aria-label="Facebook" rel="noopener noreferrer" target="_blank">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="2" fill="none"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/c10insurance" aria-label="Instagram" rel="noopener noreferrer" target="_blank">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2" fill="none"/>
+                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
+                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/@c10insurance" aria-label="YouTube" rel="noopener noreferrer" target="_blank">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.4 19.6C5.12 20 12 20 12 20s6.88 0 8.6-.4a2.78 2.78 0 001.94-2A29 29 0 0023 12a29 29 0 00-.46-5.58z" stroke="currentColor" stroke-width="2" fill="none"/>
+                <path d="M9.75 15.02l5.75-3.02-5.75-3.02v6.04z" fill="currentColor"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        {# Quick Links #}
+        <div class="footer-section">
+          <h4 class="footer-subtitle">Quick Links</h4>
+          <nav class="footer-nav">
+            <a href="/">Home</a>
+            <a href="/about/">About C10 Insurance</a>
+            <a href="/services/">C10 Coverage Options</a>
+            <a href="/contact/">Get Quote</a>
+            <a href="/blog/">C10 Tips & News</a>
+          </nav>
+        </div>
+        
+        {# Coverage #}
+        <div class="footer-section">
+          <h4 class="footer-subtitle">C10 Coverage</h4>
+          <nav class="footer-nav">
+            <a href="/services/#agreed-value">Agreed Value Coverage</a>
+            <a href="/services/#restoration">Restoration Coverage</a>
+            <a href="/services/#daily-driver">Daily Driver Protection</a>
+            <a href="/services/#show-truck">Show Truck Insurance</a>
+            <a href="/services/#liability">Liability Options</a>
+          </nav>
+        </div>
+        
+        {# Contact #}
+        <div class="footer-section">
+          <h4 class="footer-subtitle">Contact Us</h4>
+          <div class="footer-contact">
+            <p><strong>Phone:</strong> <a href="tel:844-967-5247">844-967-5247</a></p>
+            <p><strong>Claims:</strong> <a href="tel:800-210-2524">800-C10-CLAIM</a></p>
+            <p><strong>Email:</strong> <a href="mailto:quotes@c10insurance.com">quotes@c10insurance.com</a></p>
+            <p><strong>Hours:</strong> 7 Days a Week</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-content">
+        <p>&copy; {{ 'now' | date('%Y') }} {{ site.name }}. All rights reserved. | Specializing in 1960-1998 Chevy C10 Insurance</p>
+        <nav class="footer-legal">
+          <a href="/privacy/">Privacy Policy</a>
+          <span class="separator">|</span>
+          <a href="/terms/">Terms of Service</a>
+          <span class="separator">|</span>
+          <a href="/sitemap.xml">Sitemap</a>
+        </nav>
+      </div>
     </div>
   </div>
 </footer>
+
+<style>
+/* Footer Styles */
+.site-footer {
+  background: linear-gradient(180deg, rgba(5, 7, 20, 0.98) 0%, #000000 100%);
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(20, 184, 166, 0.5), transparent);
+}
+
+.footer-top {
+  padding: 4rem 0 3rem;
+  position: relative;
+}
+
+.footer-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(59, 130, 246, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #14b8a6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-subtitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #14b8a6;
+}
+
+.footer-desc {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-social {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(20, 184, 166, 0.1);
+  border: 1px solid rgba(20, 184, 166, 0.3);
+  border-radius: 10px;
+  color: #14b8a6;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background: rgba(20, 184, 166, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(20, 184, 166, 0.3);
+}
+
+.footer-social svg {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-nav a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-left: 15px;
+}
+
+.footer-nav a::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+  color: #14b8a6;
+}
+
+.footer-nav a:hover {
+  color: #14b8a6;
+  padding-left: 20px;
+}
+
+.footer-nav a:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.footer-contact p {
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-contact strong {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-contact a {
+  color: #14b8a6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: #06b6d4;
+}
+
+.footer-bottom {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-legal {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-legal a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+  color: #14b8a6;
+}
+
+.separator {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .footer-section:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-legal {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .footer-top {
+    padding: 3rem 0 2rem;
+  }
+}
+</style>
