@@ -1,0 +1,466 @@
+{# Component: section-contact-c10 #}
+{# Purpose: Contact section with form and information for C10 insurance inquiries #}
+{# Parameters: 
+   - title: Section title
+   - subtitle: Section subtitle
+#}
+
+<section class="c-contact-c10">
+  <div class="c-contact-c10__container">
+    {# Header #}
+    <div class="c-contact-c10__header">
+      <h2 class="c-contact-c10__title">{{ title | default('Get Your C10 Quote Today') }}</h2>
+      {% if subtitle %}
+      <p class="c-contact-c10__subtitle">{{ subtitle | default('Connect with our C10 specialists for personalized coverage options') }}</p>
+      {% endif %}
+    </div>
+    
+    <div class="c-contact-c10__content">
+      {# Contact Form #}
+      <div class="c-contact-c10__form-wrapper">
+        <form class="c-contact-c10__form" action="/contact-submit" method="POST">
+          <div class="c-contact-c10__form-grid">
+            <div class="c-contact-c10__form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="c-contact-c10__form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="c-contact-c10__form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <div class="c-contact-c10__form-group">
+              <label for="year">C10 Year</label>
+              <select id="year" name="year" required>
+                <option value="">Select Year</option>
+                {% for year in range(1960, 1999) %}
+                <option value="{{ year }}">{{ year }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            
+            <div class="c-contact-c10__form-group c-contact-c10__form-group--full">
+              <label for="model">C10 Model/Trim</label>
+              <input type="text" id="model" name="model" placeholder="e.g., Fleetside, Stepside, Cheyenne" required>
+            </div>
+            
+            <div class="c-contact-c10__form-group c-contact-c10__form-group--full">
+              <label for="coverage">Coverage Type Needed</label>
+              <select id="coverage" name="coverage" required>
+                <option value="">Select Coverage Type</option>
+                <option value="classic">Classic C10 Coverage</option>
+                <option value="daily">Daily Driver Protection</option>
+                <option value="modified">Modified C10 Insurance</option>
+                <option value="collector">Collector's Coverage</option>
+                <option value="fleet">Multi-C10 Fleet</option>
+                <option value="commercial">Commercial Use</option>
+                <option value="unsure">Not Sure - Need Guidance</option>
+              </select>
+            </div>
+            
+            <div class="c-contact-c10__form-group c-contact-c10__form-group--full">
+              <label for="message">Additional Information</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your C10 and any special coverage needs..."></textarea>
+            </div>
+          </div>
+          
+          <button type="submit" class="c-contact-c10__submit">
+            <span>Get My C10 Quote</span>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+      
+      {# Contact Info #}
+      <div class="c-contact-c10__info">
+        <div class="c-contact-c10__info-card">
+          <h3>Speak to a C10 Specialist</h3>
+          <p>Our team of C10 experts is ready to help you find the perfect coverage for your truck.</p>
+          
+          <div class="c-contact-c10__info-items">
+            <div class="c-contact-c10__info-item">
+              <div class="c-contact-c10__info-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Call Us</h4>
+                <a href="tel:844-967-5247">844-967-5247</a>
+                <span class="c-contact-c10__info-sub">844-WORK-247</span>
+              </div>
+            </div>
+            
+            <div class="c-contact-c10__info-item">
+              <div class="c-contact-c10__info-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Email Us</h4>
+                <a href="mailto:c10@c10insurance.com">c10@c10insurance.com</a>
+              </div>
+            </div>
+            
+            <div class="c-contact-c10__info-item">
+              <div class="c-contact-c10__info-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                  <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Office Hours</h4>
+                <p>Mon-Fri: 8AM - 8PM EST<br>
+                Sat-Sun: 9AM - 5PM EST</p>
+              </div>
+            </div>
+            
+            <div class="c-contact-c10__info-item">
+              <div class="c-contact-c10__info-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2" fill="none"/>
+                  <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Headquarters</h4>
+                <p>123 Classic Drive<br>
+                Detroit, MI 48201</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="c-contact-c10__info-badges">
+            <span class="c-contact-c10__info-badge">24/7 Claims</span>
+            <span class="c-contact-c10__info-badge">C10 Experts</span>
+            <span class="c-contact-c10__info-badge">Fast Response</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.c-contact-c10 {
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(5, 7, 20, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%);
+}
+
+.c-contact-c10::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 10% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 90% 50%, rgba(20, 184, 166, 0.1) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.c-contact-c10__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Header */
+.c-contact-c10__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.c-contact-c10__title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #ffffff 0%, #14b8a6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.c-contact-c10__subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Content Layout */
+.c-contact-c10__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Form Wrapper */
+.c-contact-c10__form-wrapper {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Grid */
+.c-contact-c10__form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.c-contact-c10__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.c-contact-c10__form-group--full {
+  grid-column: 1 / -1;
+}
+
+.c-contact-c10__form-group label {
+  font-weight: 600;
+  color: #14b8a6;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.c-contact-c10__form-group input,
+.c-contact-c10__form-group select,
+.c-contact-c10__form-group textarea {
+  padding: 1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #ffffff;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(10px);
+}
+
+.c-contact-c10__form-group input:focus,
+.c-contact-c10__form-group select:focus,
+.c-contact-c10__form-group textarea:focus {
+  outline: none;
+  border-color: #14b8a6;
+  background: rgba(20, 184, 166, 0.05);
+  box-shadow: 
+    0 0 0 4px rgba(20, 184, 166, 0.1),
+    0 0 40px rgba(20, 184, 166, 0.2);
+}
+
+.c-contact-c10__form-group input::placeholder,
+.c-contact-c10__form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.c-contact-c10__form-group select option {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+/* Submit Button */
+.c-contact-c10__submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 2.5rem;
+  background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 
+    0 4px 15px rgba(20, 184, 166, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: 100%;
+  justify-content: center;
+}
+
+.c-contact-c10__submit svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.c-contact-c10__submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 10px 30px rgba(20, 184, 166, 0.6),
+    0 0 60px rgba(6, 182, 212, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.c-contact-c10__submit:hover svg {
+  transform: translateX(5px);
+}
+
+/* Info Section */
+.c-contact-c10__info-card {
+  background: linear-gradient(135deg, rgba(30, 91, 168, 0.05) 0%, rgba(20, 184, 166, 0.03) 100%);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 3rem;
+  height: 100%;
+}
+
+.c-contact-c10__info-card h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.c-contact-c10__info-card > p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.c-contact-c10__info-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.c-contact-c10__info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.c-contact-c10__info-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  color: #14b8a6;
+  padding: 0.75rem;
+  background: rgba(20, 184, 166, 0.1);
+  border-radius: 12px;
+  filter: drop-shadow(0 0 20px rgba(20, 184, 166, 0.3));
+}
+
+.c-contact-c10__info-item h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #ffffff;
+}
+
+.c-contact-c10__info-item a {
+  color: #14b8a6;
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.c-contact-c10__info-item a:hover {
+  color: #06b6d4;
+  text-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
+}
+
+.c-contact-c10__info-sub {
+  display: block;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.25rem;
+}
+
+.c-contact-c10__info-item p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Info Badges */
+.c-contact-c10__info-badges {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.c-contact-c10__info-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.25rem;
+  background: rgba(20, 184, 166, 0.1);
+  border: 1px solid rgba(20, 184, 166, 0.3);
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #14b8a6;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .c-contact-c10__content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .c-contact-c10__title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .c-contact-c10 {
+    padding: 3rem 0;
+  }
+  
+  .c-contact-c10__title {
+    font-size: 2rem;
+  }
+  
+  .c-contact-c10__form-wrapper {
+    padding: 2rem;
+  }
+  
+  .c-contact-c10__form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .c-contact-c10__info-card {
+    padding: 2rem;
+  }
+  
+  .c-contact-c10__info-badges {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+}
+</style>
