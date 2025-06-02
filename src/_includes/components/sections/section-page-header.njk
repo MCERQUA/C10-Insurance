@@ -1,0 +1,234 @@
+{# Component: section-page-header #}
+{# Purpose: Hero section for internal pages with consistent C10 branding #}
+{# Parameters: 
+   - title: Page title
+   - subtitle: Page description/subtitle
+   - breadcrumbs: Array of breadcrumb items (optional)
+#}
+
+<section class="c-page-header">
+  <div class="c-page-header__background">
+    <div class="c-page-header__grid"></div>
+    <div class="c-page-header__glow"></div>
+  </div>
+  
+  <div class="c-page-header__container">
+    {# Breadcrumbs #}
+    {% if breadcrumbs %}
+    <nav class="c-page-header__breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        {% for crumb in breadcrumbs %}
+        <li>{{ crumb }}</li>
+        {% endfor %}
+      </ol>
+    </nav>
+    {% endif %}
+    
+    {# Title #}
+    <h1 class="c-page-header__title">{{ title | default('Page Title') }}</h1>
+    
+    {# Subtitle #}
+    {% if subtitle %}
+    <p class="c-page-header__subtitle">{{ subtitle }}</p>
+    {% endif %}
+    
+    {# Decorative C10 truck silhouette #}
+    <div class="c-page-header__truck">
+      <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 140 L80 140 L85 120 L130 120 L135 100 L280 100 L290 120 L350 120 L350 140 L320 140 M100 140 L280 140" 
+              stroke="url(#truckGradient)" stroke-width="2" fill="none" opacity="0.3"/>
+        <circle cx="120" cy="140" r="15" fill="none" stroke="url(#truckGradient)" stroke-width="2" opacity="0.3"/>
+        <circle cx="280" cy="140" r="15" fill="none" stroke="url(#truckGradient)" stroke-width="2" opacity="0.3"/>
+        <defs>
+          <linearGradient id="truckGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<style>
+.c-page-header {
+  position: relative;
+  padding: 6rem 0 4rem;
+  margin-bottom: 4rem;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(5, 7, 20, 0.95) 0%, rgba(5, 7, 20, 0.98) 100%);
+  min-height: 300px;
+}
+
+.c-page-header__background {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Animated grid background */
+.c-page-header__grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridSlide 20s linear infinite;
+}
+
+@keyframes gridSlide {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+/* Gradient glow */
+.c-page-header__glow {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  width: 800px;
+  height: 400px;
+  background: radial-gradient(ellipse at center, rgba(20, 184, 166, 0.15) 0%, transparent 70%);
+  transform: translateX(-50%);
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+}
+
+.c-page-header__container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+/* Breadcrumbs */
+.c-page-header__breadcrumbs {
+  margin-bottom: 2rem;
+}
+
+.c-page-header__breadcrumbs ol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.c-page-header__breadcrumbs li {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.875rem;
+}
+
+.c-page-header__breadcrumbs li:not(:last-child)::after {
+  content: '/';
+  margin-left: 0.5rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.c-page-header__breadcrumbs a {
+  color: #14b8a6;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.c-page-header__breadcrumbs a:hover {
+  color: #06b6d4;
+  text-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
+}
+
+/* Title */
+.c-page-header__title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #ffffff 0%, #60a5fa 50%, #14b8a6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: titleShimmer 3s ease-in-out infinite;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+@keyframes titleShimmer {
+  0%, 100% { 
+    background-position: 0% 50%;
+    filter: brightness(1);
+  }
+  50% { 
+    background-position: 100% 50%;
+    filter: brightness(1.2);
+  }
+}
+
+/* Subtitle */
+.c-page-header__subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Decorative truck */
+.c-page-header__truck {
+  position: absolute;
+  bottom: -50px;
+  right: 10%;
+  width: 400px;
+  opacity: 0.1;
+  animation: truckDrive 30s linear infinite;
+}
+
+@keyframes truckDrive {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-200%); }
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .c-page-header {
+    padding: 4rem 0 3rem;
+    min-height: 250px;
+  }
+  
+  .c-page-header__title {
+    font-size: 2.5rem;
+  }
+  
+  .c-page-header__truck {
+    width: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+  .c-page-header {
+    padding: 3rem 0 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .c-page-header__title {
+    font-size: 2rem;
+  }
+  
+  .c-page-header__subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .c-page-header__truck {
+    display: none;
+  }
+}
+</style>
