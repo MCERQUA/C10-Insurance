@@ -78,43 +78,6 @@
           <span>4.9 Star Rating</span>
         </div>
       </div>
-    </div>
-    
-    <div class="c-cta-s10__visual">
-      <div class="c-cta-s10__truck">
-        <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M60 180 L90 160 L160 160 L190 140 L290 140 L310 160 L360 160 L360 200 L330 200 L320 210 L300 210 L290 200 L130 200 L120 210 L100 210 L90 200 L60 200 Z" 
-                fill="url(#truck-gradient)" 
-                stroke="url(#truck-stroke)" 
-                stroke-width="3"
-                class="c-cta-s10__truck-body"/>
-          <circle cx="110" cy="210" r="20" fill="none" stroke="url(#wheel-gradient)" stroke-width="4" class="c-cta-s10__wheel c-cta-s10__wheel--front"/>
-          <circle cx="310" cy="210" r="20" fill="none" stroke="url(#wheel-gradient)" stroke-width="4" class="c-cta-s10__wheel c-cta-s10__wheel--rear"/>
-          
-          <!-- Animated headlights -->
-          <ellipse cx="360" cy="180" rx="15" ry="10" fill="url(#headlight-gradient)" opacity="0.8" class="c-cta-s10__headlight"/>
-          
-          <defs>
-            <linearGradient id="truck-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#1e5ba8;stop-opacity:0.3" />
-              <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:0.2" />
-            </linearGradient>
-            <linearGradient id="truck-stroke" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" style="stop-color:#3b82f6" />
-              <stop offset="50%" style="stop-color:#14b8a6" />
-              <stop offset="100%" style="stop-color:#06b6d4" />
-            </linearGradient>
-            <radialGradient id="wheel-gradient">
-              <stop offset="0%" style="stop-color:#60a5fa" />
-              <stop offset="100%" style="stop-color:#14b8a6" />
-            </radialGradient>
-            <radialGradient id="headlight-gradient">
-              <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:0.8" />
-              <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0.2" />
-            </radialGradient>
-          </defs>
-        </svg>
-      </div>
       
       <div class="c-cta-s10__badge">
         <div class="c-cta-s10__badge-inner">
@@ -142,11 +105,11 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(135deg, 
-      rgba(5, 7, 20, 0.98) 0%, 
-      rgba(15, 23, 42, 0.95) 25%,
-      rgba(30, 41, 59, 0.9) 50%,
-      rgba(30, 64, 175, 0.4) 75%,
-      rgba(20, 184, 166, 0.3) 100%);
+      #0f172a 0%, 
+      #1e3a8a 25%,
+      #1e5ba8 50%,
+      #14b8a6 75%,
+      #06b6d4 100%);
   }
 
   .c-cta-s10__pattern {
@@ -159,19 +122,18 @@
   }
 
   .c-cta-s10__container {
-    max-width: 1400px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 2rem;
     position: relative;
     z-index: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    text-align: center;
   }
 
   .c-cta-s10__content {
-    max-width: 600px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
   }
 
   .c-cta-s10__title {
@@ -199,13 +161,14 @@
     gap: 2rem;
     margin-bottom: 2.5rem;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .c-cta-s10__benefit {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: #14b8a6;
+    color: rgba(255, 255, 255, 0.9);
     font-weight: 500;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   }
@@ -213,6 +176,7 @@
   .c-cta-s10__benefit-icon {
     width: 20px;
     height: 20px;
+    color: #60a5fa;
     filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
   }
 
@@ -222,6 +186,7 @@
     gap: 1.5rem;
     margin-bottom: 2rem;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .c-cta-s10__btn {
@@ -241,7 +206,7 @@
   }
 
   .c-cta-s10__btn--primary {
-    background: linear-gradient(135deg, #1e5ba8 0%, #3b82f6 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
     color: #ffffff;
     box-shadow: 
       0 10px 30px rgba(59, 130, 246, 0.5),
@@ -272,16 +237,16 @@
   .c-cta-s10__btn--secondary {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    color: #14b8a6;
-    border: 2px solid rgba(20, 184, 166, 0.5);
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   }
 
   .c-cta-s10__btn--secondary:hover {
-    background: rgba(20, 184, 166, 0.2);
-    border-color: rgba(20, 184, 166, 0.7);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
     transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(20, 184, 166, 0.4);
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.1);
   }
 
   .c-cta-s10__btn-icon {
@@ -299,6 +264,8 @@
     display: flex;
     gap: 2rem;
     align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
   }
 
   .c-cta-s10__trust-item {
@@ -316,59 +283,19 @@
     color: rgba(255, 255, 255, 0.6);
   }
 
-  .c-cta-s10__visual {
-    position: relative;
-    display: flex;
+  .c-cta-s10__badge {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-  }
-
-  .c-cta-s10__truck {
-    width: 100%;
-    max-width: 500px;
-    animation: float 6s ease-in-out infinite;
-    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
-  }
-
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-  }
-
-  .c-cta-s10__wheel {
-    animation: rotate 2s linear infinite;
-    transform-origin: center;
-  }
-
-  @keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-
-  .c-cta-s10__headlight {
-    animation: pulse 2s ease-in-out infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 0.6; }
-    50% { opacity: 1; }
-  }
-
-  .c-cta-s10__badge {
-    position: absolute;
-    top: 20px;
-    right: 20px;
     width: 120px;
     height: 120px;
     background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     box-shadow: 
       0 20px 40px rgba(20, 184, 166, 0.5),
       inset 0 2px 4px rgba(255, 255, 255, 0.3);
     animation: badgePulse 3s ease-in-out infinite;
+    margin: 0 auto;
   }
 
   @keyframes badgePulse {
@@ -396,30 +323,8 @@
   }
 
   @media (max-width: 968px) {
-    .c-cta-s10__container {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-
-    .c-cta-s10__content {
-      max-width: 100%;
-    }
-
-    .c-cta-s10__benefits {
-      justify-content: center;
-    }
-
-    .c-cta-s10__actions {
-      justify-content: center;
-    }
-
     .c-cta-s10__trust {
-      justify-content: center;
-    }
-
-    .c-cta-s10__visual {
-      max-width: 400px;
-      margin: 0 auto;
+      flex-wrap: wrap;
     }
   }
 
