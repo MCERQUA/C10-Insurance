@@ -1,16 +1,16 @@
-# S10 Insurance Website - Master Development Guide
+# C10 Insurance Website - Master Development Guide
 
 ## 🚀 Quick Start (echo init)
 
 When starting any development session, run this initialization sequence:
 
 ```bash
-# 1. Confirm you're in the S10-Insurance directory
+# 1. Confirm you're in the C10-Insurance directory
 # 2. Run: echo init
 # 3. This will trigger the AI to:
 #    - Fetch AI/Memory/memory.json
 #    - Load component registry from docs/components/COMPONENT_REGISTRY.md
-#    - Review brand style guide from docs/Website-brand-style-sheet-for-S10.html
+#    - Review brand style guide from docs/Website-brand-style-sheet-for-C10.html
 #    - Check recent updates in docs/development-log.md
 ```
 
@@ -66,7 +66,7 @@ src/
 When including components with custom data:
 ```nunjucks
 {% set heroData = {
-  title: "Welcome to S10 Insurance",
+  title: "Welcome to C10 Insurance",
   subtitle: "Your trusted partner",
   ctaText: "Get Started",
   ctaLink: "/contact"
@@ -95,7 +95,7 @@ When including components with custom data:
    - Usage examples for each component
    - Component dependencies
 
-2. **Style Guide**: `/docs/Website-brand-style-sheet-for-S10.html`
+2. **Style Guide**: `/docs/Website-brand-style-sheet-for-C10.html`
    - Brand colors and usage
    - Typography specifications
    - Visual guidelines
