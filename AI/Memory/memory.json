@@ -10,9 +10,18 @@
     "targetAudience": "Chevy C10 pickup truck owners (1960-1998 C/K series)"
   },
   
+  "companyInfo": {
+    "legalName": "C10 Insurance",
+    "rocNumber": "335896",
+    "rocNumberDisplay": "ROC #335896",
+    "licenses": ["ROC #335896", "Licensed in All 50 States"],
+    "established": "1999",
+    "specialization": "Chevy C10 pickup truck insurance (1960-1998)"
+  },
+  
   "currentStatus": {
     "lastUpdated": "June 2, 2025",
-    "version": "v0.3.2",
+    "version": "v0.3.3",
     "pagesCompleted": ["index.njk (homepage)", "services.njk", "about.njk", "blog.njk", "contact.njk"],
     "componentsCreated": 12,
     "c10SpecificComponents": 6,
@@ -49,7 +58,7 @@
         "name": "section-c10-stats",
         "path": "src/_includes/components/sections/section-c10-stats.njk",
         "purpose": "Trust indicators and statistics",
-        "features": ["15,000+ C10s insured", "40% savings", "4.9/5 rating", "98% satisfaction"]
+        "features": ["15,000+ C10s insured", "40% savings", "4.9/5 rating", "98% satisfaction", "ROC #335896"]
       },
       {
         "name": "section-cta-c10",
@@ -135,7 +144,8 @@
       "C10 specialist since 1999",
       "Save up to 40%",
       "15,000+ C10s insured",
-      "24/7 C10 support"
+      "24/7 C10 support",
+      "ROC #335896"
     ]
   },
   
@@ -316,6 +326,7 @@
     "Check for white background issues",
     "Check for white space issues",
     "Ensure no SVG trucks are present",
+    "Verify ROC #335896 is displayed correctly",
     "Update development log",
     "Ensure all new files are committed",
     "Push to GitHub main branch",
@@ -341,6 +352,7 @@
   "aiNotes": [
     "CRITICAL: Run 'echo init' at start of every session",
     "This is a C10-specific insurance website targeting 1960-1998 Chevy C10 owners",
+    "Company ROC number is 335896 - must be displayed as 'ROC #335896'",
     "6 custom C10 components created for homepage",
     "Components use self-contained styles with glassmorphism effects",
     "Dark theme with blue/teal gradients throughout",
