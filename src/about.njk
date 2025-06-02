@@ -71,6 +71,7 @@ description: Learn about C10 Insurance's 25+ years of expertise protecting class
   background: linear-gradient(180deg, rgba(5, 7, 20, 0.98) 0%, rgba(15, 23, 42, 0.95) 100%);
   position: relative;
   overflow: hidden;
+  margin: 0;
 }
 
 .c-mission::before {
@@ -106,6 +107,17 @@ description: Learn about C10 Insurance's 25+ years of expertise protecting class
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { 
+    background-position: 0% 50%;
+    filter: brightness(1);
+  }
+  50% { 
+    background-position: 100% 50%;
+    filter: brightness(1.2);
+  }
 }
 
 .c-mission__lead {
@@ -172,8 +184,9 @@ description: Learn about C10 Insurance's 25+ years of expertise protecting class
 /* SEO Content */
 .seo-content {
   padding: 4rem 0;
-  background: rgba(5, 7, 20, 0.95);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.95) 0%, rgba(5, 7, 20, 0.98) 100%);
   position: relative;
+  margin: 0;
 }
 
 .seo-content .container {
