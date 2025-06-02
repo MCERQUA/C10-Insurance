@@ -8,7 +8,8 @@
     "build": "eleventy",
     "watch": "eleventy --watch",
     "serve": "eleventy --serve",
-    "debug": "DEBUG=* eleventy"
+    "debug": "DEBUG=* eleventy",
+    "optimize-images": "node scripts/optimize-images.js"
   },
   "keywords": [
     "eleventy",
@@ -18,7 +19,9 @@
   "author": "S10 Digital",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "sharp": "^0.33.0",
+    "fs-extra": "^11.0.0"
   },
   "dependencies": {}
 }
