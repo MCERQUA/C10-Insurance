@@ -11,12 +11,12 @@
   },
   
   "currentStatus": {
-    "lastUpdated": "June 1, 2025",
-    "version": "v0.3.0",
+    "lastUpdated": "June 2, 2025",
+    "version": "v0.3.1",
     "pagesCompleted": ["index.njk (homepage)"],
-    "componentsCreated": 11,
+    "componentsCreated": 12,
     "c10SpecificComponents": 6,
-    "genericComponents": 5
+    "genericComponents": 6
   },
   
   "c10Components": {
@@ -279,7 +279,7 @@
     "6 custom C10 components created for homepage",
     "Components use self-contained styles with glassmorphism effects",
     "Dark theme with blue/teal gradients throughout",
-    "All text must have good contrast - CTA section updated with darker bg",
+    "All text must have good contrast",
     "Strong SEO focus on C10-related keywords",
     "Components are 'ingredients', pages are 'recipes'",
     "This project uses Nunjucks, not Liquid - syntax is different",
