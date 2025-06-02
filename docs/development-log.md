@@ -5,6 +5,25 @@ Track all development activities, decisions, and changes to maintain consistency
 
 ---
 
+## June 2, 2025 - Netlify Lighthouse Plugin Installation
+
+### Updates
+- Successfully installed @netlify/plugin-lighthouse@6.0.1
+- Fixed TOML configuration errors
+- Plugin now configured to run on all deployments
+
+### Lighthouse Configuration
+- **Audits**: accessibility, best-practices, performance, pwa, seo
+- **Output**: Reports automatically available in Netlify dashboard
+- **Triggers**: Runs on every successful deployment
+
+### Testing
+- Previous Lighthouse scores visible (perfect 100s) may have been from manual audit or Netlify auto-audit
+- Plugin will now run automatically on future deployments
+- Next deploy should show Lighthouse execution in build logs
+
+---
+
 ## June 2, 2025 - Documentation Cleanup
 
 ### Updates
@@ -246,6 +265,8 @@ Track all development activities, decisions, and changes to maintain consistency
 ### Resolved
 - White text on light background in CTA section
 - CSS white space issues around body margins
+- TOML syntax errors in netlify.toml
+- Lighthouse plugin configuration errors
 
 ---
 
@@ -293,6 +314,7 @@ Track all development activities, decisions, and changes to maintain consistency
 ---
 
 ## Version History
+- v0.3.2 - Added Netlify Lighthouse plugin for automated performance monitoring
 - v0.3.1 - Documentation cleanup and optimization
 - v0.2.2 - Added image optimization system
 - v0.2.1 - Added top banner and modern navigation
