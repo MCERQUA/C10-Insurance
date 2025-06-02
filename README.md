@@ -1,30 +1,30 @@
-# S10 Insurance - Specialized Coverage for Chevy S10 Pickup Trucks
+# C10 Insurance - Specialized Coverage for Chevy C10 Pickup Trucks
 
-![S10 Insurance](https://img.shields.io/badge/S10-Insurance-14b8a6?style=for-the-badge)
+![C10 Insurance](https://img.shields.io/badge/C10-Insurance-14b8a6?style=for-the-badge)
 ![Eleventy](https://img.shields.io/badge/Eleventy-v2.0.1-000000?style=for-the-badge)
 ![Netlify Status](https://img.shields.io/badge/Netlify-Deployed-00C7B7?style=for-the-badge)
 
-## 🚛 About S10 Insurance
+## 🚛 About C10 Insurance
 
-S10 Insurance is a specialized insurance website dedicated exclusively to Chevy S10 pickup truck owners. We provide tailored coverage for all S10 models from 1982-2004, including the S10 Blazer, ZR2, SS, and Xtreme variants.
+C10 Insurance is a specialized insurance website dedicated exclusively to Chevy C10 pickup truck owners. We provide tailored coverage for all C10 models from 1960-1998, including the C10 Fleetside, Stepside, Suburban, Cheyenne, Scottsdale, and Silverado variants.
 
-**Live Site**: [https://s10insurance.netlify.app](https://s10insurance.netlify.app)
+**Live Site**: [https://c10insurance.netlify.app](https://c10insurance.netlify.app)
 
 ## 🎯 Target Audience
 
-- Chevy S10 pickup truck owners (1982-2004)
-- S10 enthusiasts with modified trucks
-- Classic S10 collectors
-- Daily S10 drivers seeking specialized coverage
+- Chevy C10 pickup truck owners (1960-1998)
+- C10 enthusiasts with restored classics
+- Classic C10 collectors
+- Daily C10 drivers seeking specialized coverage
 
 ## ✨ Features
 
-- **S10-Specific Coverage**: Tailored insurance for every S10 variant
-- **Model Timeline**: Interactive showcase of all S10 generations
-- **Instant Quotes**: 60-second online quotes for S10 owners
-- **Modification Friendly**: Coverage for lifts, engine swaps, and custom parts
-- **S10 Parts Network**: Access to OEM and quality aftermarket parts
-- **24/7 Support**: Dedicated S10 insurance specialists
+- **C10-Specific Coverage**: Tailored insurance for every C10 variant
+- **Model Timeline**: Interactive showcase of all C10 generations
+- **Instant Quotes**: 60-second online quotes for C10 owners
+- **Modification Friendly**: Coverage for restorations, engine swaps, and custom parts
+- **C10 Parts Network**: Access to OEM and quality aftermarket parts
+- **24/7 Support**: Dedicated C10 insurance specialists
 
 ## 🛠️ Tech Stack
 
@@ -45,10 +45,10 @@ S10 Insurance is a specialized insurance website dedicated exclusively to Chevy 
 
 ```bash
 # Clone the repository
-git clone https://github.com/MCERQUA/S10-Insurance.git
+git clone https://github.com/MCERQUA/C10-Insurance.git
 
 # Navigate to project directory
-cd S10-Insurance
+cd C10-Insurance
 
 # Install dependencies
 npm install
@@ -70,11 +70,11 @@ npm run build
 ## 📁 Project Structure
 
 ```
-S10-Insurance/
+C10-Insurance/
 ├── src/
 │   ├── _includes/
 │   │   └── components/
-│   │       └── sections/      # S10-specific components
+│   │       └── sections/      # C10-specific components
 │   ├── _layouts/              # Page layouts
 │   ├── _data/                 # Global data files
 │   ├── css/                   # Global styles
@@ -101,23 +101,23 @@ S10-Insurance/
 
 The site uses a component-based architecture with 11 reusable components:
 
-**S10-Specific Components:**
-- `section-hero-s10` - Animated hero with S10 truck silhouette
-- `section-s10-models` - Timeline of all S10 generations
-- `section-why-s10` - Value proposition for S10 insurance
-- `section-coverage-grid` - S10 coverage options
-- `section-s10-stats` - Trust indicators and statistics
-- `section-cta-s10` - Call to action with animated truck
+**C10-Specific Components:**
+- `section-hero-c10` - Animated hero with C10 truck silhouette
+- `section-c10-models` - Timeline of all C10 generations
+- `section-why-c10` - Value proposition for C10 insurance
+- `section-coverage-grid` - C10 coverage options
+- `section-c10-stats` - Trust indicators and statistics
+- `section-cta-c10` - Call to action with animated truck
 
 ## 📊 SEO Strategy
 
-Optimized for S10-related keywords:
-- S10 insurance
-- Chevy S10 insurance
-- S10 pickup insurance
-- S10 Blazer insurance
-- S10 ZR2 insurance
-- All model years: 1982-2004
+Optimized for C10-related keywords:
+- C10 insurance
+- Chevy C10 insurance
+- C10 pickup insurance
+- C10 Fleetside insurance
+- C10 Stepside insurance
+- All model years: 1960-1998
 
 ## 🔧 Component Development
 
@@ -165,14 +165,14 @@ git push origin main
 
 ## 📞 Contact
 
-For questions about the S10 Insurance website development:
-- **Repository**: [https://github.com/MCERQUA/S10-Insurance](https://github.com/MCERQUA/S10-Insurance)
-- **Live Site**: [https://s10insurance.netlify.app](https://s10insurance.netlify.app)
+For questions about the C10 Insurance website development:
+- **Repository**: [https://github.com/MCERQUA/C10-Insurance](https://github.com/MCERQUA/C10-Insurance)
+- **Live Site**: [https://c10insurance.netlify.app](https://c10insurance.netlify.app)
 
 ## 📄 License
 
-This project is proprietary to S10 Insurance.
+This project is proprietary to C10 Insurance.
 
 ---
 
-Built with ❤️ for Chevy S10 owners everywhere 🚛
+Built with ❤️ for Chevy C10 owners everywhere 🚛
