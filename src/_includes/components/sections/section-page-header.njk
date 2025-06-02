@@ -32,22 +32,6 @@
     {% if subtitle %}
     <p class="c-page-header__subtitle">{{ subtitle }}</p>
     {% endif %}
-    
-    {# Decorative C10 truck silhouette #}
-    <div class="c-page-header__truck">
-      <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-        <path d="M50 140 L80 140 L85 120 L130 120 L135 100 L280 100 L290 120 L350 120 L350 140 L320 140 M100 140 L280 140" 
-              stroke="url(#truckGradient)" stroke-width="2" fill="none" opacity="0.3"/>
-        <circle cx="120" cy="140" r="15" fill="none" stroke="url(#truckGradient)" stroke-width="2" opacity="0.3"/>
-        <circle cx="280" cy="140" r="15" fill="none" stroke="url(#truckGradient)" stroke-width="2" opacity="0.3"/>
-        <defs>
-          <linearGradient id="truckGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:1" />
-          </linearGradient>
-        </defs>
-      </svg>
-    </div>
   </div>
 </section>
 
@@ -55,9 +39,9 @@
 .c-page-header {
   position: relative;
   padding: 6rem 0 4rem;
-  margin-bottom: 4rem;
+  margin: 0;
   overflow: hidden;
-  background: linear-gradient(180deg, rgba(5, 7, 20, 0.95) 0%, rgba(5, 7, 20, 0.98) 100%);
+  background: linear-gradient(180deg, rgba(5, 7, 20, 0.98) 0%, rgba(15, 23, 42, 0.95) 100%);
   min-height: 300px;
 }
 
@@ -182,21 +166,6 @@
   line-height: 1.6;
 }
 
-/* Decorative truck */
-.c-page-header__truck {
-  position: absolute;
-  bottom: -50px;
-  right: 10%;
-  width: 400px;
-  opacity: 0.1;
-  animation: truckDrive 30s linear infinite;
-}
-
-@keyframes truckDrive {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-200%); }
-}
-
 /* Responsive */
 @media (max-width: 968px) {
   .c-page-header {
@@ -207,16 +176,11 @@
   .c-page-header__title {
     font-size: 2.5rem;
   }
-  
-  .c-page-header__truck {
-    width: 300px;
-  }
 }
 
 @media (max-width: 640px) {
   .c-page-header {
     padding: 3rem 0 2rem;
-    margin-bottom: 2rem;
   }
   
   .c-page-header__title {
@@ -225,10 +189,6 @@
   
   .c-page-header__subtitle {
     font-size: 1.125rem;
-  }
-  
-  .c-page-header__truck {
-    display: none;
   }
 }
 </style>
