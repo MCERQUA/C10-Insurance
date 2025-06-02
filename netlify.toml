@@ -9,11 +9,8 @@
   package = "@netlify/plugin-lighthouse"
 
   [plugins.inputs]
-    # Run Lighthouse on the entire site after build
+    # Run Lighthouse audits on all core areas
     audits = ["accessibility", "best-practices", "performance", "pwa", "seo"]
-    
-    # Upload Lighthouse results to Netlify 
-    upload = true
 
 [[redirects]]
   from = "/*"
