@@ -66,35 +66,7 @@
           <span>S10 Support</span>
         </div>
       </div>
-    </div>
-    
-    <div class="c-hero-s10__visual">
-      <div class="c-hero-s10__truck-silhouette">
-        <svg viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M50 120 L80 100 L150 100 L180 80 L280 80 L300 100 L350 100 L350 140 L320 140 L310 150 L290 150 L280 140 L120 140 L110 150 L90 150 L80 140 L50 140 Z" 
-                fill="url(#s10-gradient)" 
-                stroke="url(#s10-stroke)" 
-                stroke-width="2"
-                opacity="0.8"/>
-          <circle cx="100" cy="150" r="15" fill="none" stroke="url(#wheel-gradient)" stroke-width="3"/>
-          <circle cx="300" cy="150" r="15" fill="none" stroke="url(#wheel-gradient)" stroke-width="3"/>
-          <defs>
-            <linearGradient id="s10-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#1e5ba8;stop-opacity:0.2" />
-              <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:0.1" />
-            </linearGradient>
-            <linearGradient id="s10-stroke" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" style="stop-color:#3b82f6" />
-              <stop offset="50%" style="stop-color:#14b8a6" />
-              <stop offset="100%" style="stop-color:#06b6d4" />
-            </linearGradient>
-            <linearGradient id="wheel-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#60a5fa" />
-              <stop offset="100%" style="stop-color:#14b8a6" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
+      
       <div class="c-hero-s10__badge">
         <span class="c-hero-s10__badge-text">S10 Specialist</span>
         <span class="c-hero-s10__badge-year">Since 1999</span>
@@ -106,11 +78,12 @@
 <style>
   .c-hero-s10 {
     position: relative;
-    min-height: 100vh;
+    min-height: calc(100vh - 50px); /* Account for top banner */
     display: flex;
     align-items: center;
     overflow: hidden;
     background: #050714;
+    margin-top: -1px; /* Remove any white space */
   }
 
   .c-hero-s10__background {
@@ -178,17 +151,15 @@
   .c-hero-s10__container {
     position: relative;
     z-index: 1;
-    max-width: 1400px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 4rem 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    text-align: center;
   }
 
   .c-hero-s10__content {
-    max-width: 600px;
+    max-width: 800px;
+    margin: 0 auto;
   }
 
   .c-hero-s10__title {
@@ -221,6 +192,7 @@
     gap: 2rem;
     margin-bottom: 2.5rem;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .c-hero-s10__feature {
@@ -241,6 +213,7 @@
     gap: 1rem;
     margin-bottom: 3rem;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .c-hero-s10__cta {
@@ -310,6 +283,8 @@
   .c-hero-s10__trust {
     display: flex;
     gap: 3rem;
+    justify-content: center;
+    margin-bottom: 2rem;
   }
 
   .c-hero-s10__trust-item {
@@ -334,37 +309,17 @@
     letter-spacing: 0.05em;
   }
 
-  .c-hero-s10__visual {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .c-hero-s10__truck-silhouette {
-    width: 100%;
-    max-width: 500px;
-    animation: float 6s ease-in-out infinite;
-  }
-
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-  }
-
   .c-hero-s10__badge {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
     background: rgba(20, 184, 166, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(20, 184, 166, 0.3);
     border-radius: 12px;
-    padding: 1rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.25rem;
+    padding: 1rem 2rem;
+    margin: 0 auto;
   }
 
   .c-hero-s10__badge-text {
@@ -378,34 +333,6 @@
   .c-hero-s10__badge-year {
     font-size: 0.75rem;
     color: rgba(255, 255, 255, 0.6);
-  }
-
-  @media (max-width: 968px) {
-    .c-hero-s10__container {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-
-    .c-hero-s10__content {
-      max-width: 100%;
-    }
-
-    .c-hero-s10__features {
-      justify-content: center;
-    }
-
-    .c-hero-s10__cta-group {
-      justify-content: center;
-    }
-
-    .c-hero-s10__trust {
-      justify-content: center;
-    }
-
-    .c-hero-s10__visual {
-      max-width: 400px;
-      margin: 0 auto;
-    }
   }
 
   @media (max-width: 640px) {
