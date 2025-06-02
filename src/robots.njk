@@ -1,0 +1,46 @@
+---
+permalink: /robots.txt
+eleventyExcludeFromCollections: true
+---
+# Robots.txt for C10 Insurance
+# https://c10insurance.com
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_includes/
+Disallow: /_layouts/
+Disallow: /_data/
+
+# Sitemap location
+Sitemap: {{ site.url }}/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Popular Search Engine Bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
