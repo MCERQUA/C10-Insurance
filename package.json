@@ -1,7 +1,7 @@
 {
-  "name": "s10-insurance",
+  "name": "c10-insurance",
   "version": "1.0.0",
-  "description": "S10 Insurance website built with Eleventy",
+  "description": "C10 Insurance website built with Eleventy",
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
@@ -16,7 +16,7 @@
     "site",
     "insurance"
   ],
-  "author": "S10 Digital",
+  "author": "C10 Digital",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
