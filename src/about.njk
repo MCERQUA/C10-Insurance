@@ -1,18 +1,242 @@
 ---
-layout: page.njk
-title: About Us
-description: Learn more about S10 Insurance and our commitment to protecting what matters most to you.
+layout: base.njk
+title: About C10 Insurance - Your Trusted Chevy C10 Specialists Since 1999
+description: Learn about C10 Insurance's 25+ years of expertise protecting classic Chevy C10 trucks. We're C10 enthusiasts insuring C10s nationwide with specialized coverage.
 ---
 
-<p>S10 Insurance has been serving our community for over 20 years. We're committed to providing comprehensive insurance solutions that protect what matters most to you.</p>
+{# Page Header #}
+{% set pageHeaderData = {
+  title: "About C10 Insurance",
+  subtitle: "The original C10 insurance specialists, protecting America's favorite classic trucks since 1999",
+  breadcrumbs: ["About"]
+} %}
+{% include "components/sections/section-page-header.njk" %}
 
-<h2>Our Mission</h2>
-<p>To provide reliable, affordable insurance coverage while delivering exceptional customer service.</p>
+{# About Section #}
+{% include "components/sections/section-about-c10.njk" %}
 
-<h2>Our Values</h2>
-<ul>
-  <li>Integrity in all our dealings</li>
-  <li>Customer-first approach</li>
-  <li>Transparency and trust</li>
-  <li>Community involvement</li>
-</ul>
+{# Our Mission Section #}
+<section class="c-mission">
+  <div class="c-mission__container">
+    <div class="c-mission__content">
+      <h2 class="c-mission__title">Our Mission</h2>
+      <p class="c-mission__lead">To provide every C10 owner with insurance coverage that truly understands and values their truck.</p>
+      
+      <div class="c-mission__grid">
+        <div class="c-mission__item">
+          <h3>Preserve C10 Heritage</h3>
+          <p>We believe every C10 tells a story. Our mission is to help preserve these automotive legends by providing coverage that protects both the trucks and the memories they carry.</p>
+        </div>
+        
+        <div class="c-mission__item">
+          <h3>Support the C10 Community</h3>
+          <p>As active members of the C10 community, we sponsor shows, support clubs, and contribute to preservation efforts nationwide. Your premiums help keep the C10 culture alive.</p>
+        </div>
+        
+        <div class="c-mission__item">
+          <h3>Innovate C10 Coverage</h3>
+          <p>We continuously evolve our policies to meet the changing needs of C10 owners, from electric conversions to modern safety upgrades, ensuring your coverage keeps pace with your build.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Coverage Stats #}
+{% include "components/sections/section-c10-stats.njk" %}
+
+{# Call to Action #}
+{% include "components/sections/section-cta-c10.njk" %}
+
+{# SEO Content #}
+<section class="seo-content">
+  <div class="container">
+    <h2>Why C10 Owners Trust Us</h2>
+    <p>C10 Insurance isn't just another insurance company – we're part of the C10 family. Founded by collectors who couldn't find proper coverage for their own trucks, we've spent over two decades perfecting insurance solutions specifically for Chevy C10 pickups.</p>
+    
+    <h3>Expertise in Every C10 Generation</h3>
+    <p>From the first 1960 Apache to the last 1998 C/K series, our team knows every model, every option package, and every common modification. This expertise means accurate valuations, appropriate coverage, and claims handled by people who understand your truck's true value.</p>
+    
+    <h3>A Legacy of C10 Protection</h3>
+    <p>With over 15,000 C10s insured nationwide and a 98% customer satisfaction rate, we've earned our reputation as the go-to insurance provider for serious C10 owners. Our specialized approach has saved our customers an average of 40% compared to standard auto insurance.</p>
+    
+    <p>Join the thousands of C10 owners who trust their trucks to the specialists. Call <strong>844-967-5247</strong> today.</p>
+  </div>
+</section>
+
+<style>
+/* Mission Section */
+.c-mission {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, rgba(5, 7, 20, 0.98) 0%, rgba(15, 23, 42, 0.95) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.c-mission::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.c-mission__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.c-mission__content {
+  text-align: center;
+}
+
+.c-mission__title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #3b82f6 50%, #14b8a6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.c-mission__lead {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.c-mission__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.c-mission__item {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2.5rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.c-mission__item::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #3b82f6, #14b8a6, #06b6d4);
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: -1;
+}
+
+.c-mission__item:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+.c-mission__item:hover::before {
+  opacity: 0.3;
+}
+
+.c-mission__item h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #14b8a6;
+}
+
+.c-mission__item p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+/* SEO Content */
+.seo-content {
+  padding: 4rem 0;
+  background: rgba(5, 7, 20, 0.95);
+  position: relative;
+}
+
+.seo-content .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.seo-content h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #14b8a6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.seo-content h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+  color: #60a5fa;
+}
+
+.seo-content p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
+}
+
+.seo-content strong {
+  color: #14b8a6;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .c-mission__title {
+    font-size: 2.5rem;
+  }
+  
+  .c-mission__lead {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .c-mission {
+    padding: 3rem 0;
+  }
+  
+  .c-mission__title {
+    font-size: 2rem;
+  }
+  
+  .c-mission__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .seo-content h2 {
+    font-size: 2rem;
+  }
+}
+</style>
