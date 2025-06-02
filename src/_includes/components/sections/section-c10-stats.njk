@@ -1,0 +1,289 @@
+{# Component: section-c10-stats #}
+{# Purpose: Display impressive C10 insurance statistics #}
+{# Parameters: title, stats (array) #}
+
+<section class="c-c10-stats">
+  <div class="c-c10-stats__background">
+    <div class="c-c10-stats__grid-pattern"></div>
+  </div>
+  
+  <div class="c-c10-stats__container">
+    <div class="c-c10-stats__header">
+      <h2 class="c-c10-stats__title">
+        {{ title | default("C10 Insurance by the Numbers") }}
+      </h2>
+      <p class="c-c10-stats__subtitle">
+        Trust the leader in Chevy C10 specialty insurance
+      </p>
+    </div>
+
+    <div class="c-c10-stats__grid">
+      <div class="c-c10-stats__stat">
+        <div class="c-c10-stats__number" data-count="15000">
+          <span class="c-c10-stats__number-value">15,000</span>
+          <span class="c-c10-stats__number-plus">+</span>
+        </div>
+        <div class="c-c10-stats__label">C10s Insured</div>
+        <div class="c-c10-stats__description">More C10s than any other specialty insurer</div>
+      </div>
+
+      <div class="c-c10-stats__stat">
+        <div class="c-c10-stats__number" data-count="40">
+          <span class="c-c10-stats__number-value">40</span>
+          <span class="c-c10-stats__number-percent">%</span>
+        </div>
+        <div class="c-c10-stats__label">Average Savings</div>
+        <div class="c-c10-stats__description">Compared to generic truck insurance</div>
+      </div>
+
+      <div class="c-c10-stats__stat">
+        <div class="c-c10-stats__number" data-count="4.9">
+          <span class="c-c10-stats__number-value">4.9</span>
+          <span class="c-c10-stats__number-unit">/5</span>
+        </div>
+        <div class="c-c10-stats__label">Owner Rating</div>
+        <div class="c-c10-stats__description">From verified C10 owners</div>
+      </div>
+
+      <div class="c-c10-stats__stat">
+        <div class="c-c10-stats__number" data-count="98">
+          <span class="c-c10-stats__number-value">98</span>
+          <span class="c-c10-stats__number-percent">%</span>
+        </div>
+        <div class="c-c10-stats__label">Claims Satisfaction</div>
+        <div class="c-c10-stats__description">C10 owners love our claims process</div>
+      </div>
+    </div>
+
+    <div class="c-c10-stats__badges">
+      <div class="c-c10-stats__badge">
+        <svg class="c-c10-stats__badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+        </svg>
+        <span>C10 Specialist Since 1999</span>
+      </div>
+      <div class="c-c10-stats__badge">
+        <svg class="c-c10-stats__badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+        <span>Licensed in All 50 States</span>
+      </div>
+      <div class="c-c10-stats__badge">
+        <svg class="c-c10-stats__badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span>24/7 C10 Support</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .c-c10-stats {
+    position: relative;
+    padding: 6rem 0;
+    background: linear-gradient(180deg, rgba(5, 7, 20, 0.95) 0%, #050714 100%);
+    overflow: hidden;
+  }
+
+  .c-c10-stats__background {
+    position: absolute;
+    inset: 0;
+    opacity: 0.3;
+  }
+
+  .c-c10-stats__grid-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(rgba(20, 184, 166, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(20, 184, 166, 0.03) 1px, transparent 1px);
+    background-size: 100px 100px;
+    transform: perspective(500px) rotateX(60deg);
+    transform-origin: center bottom;
+  }
+
+  .c-c10-stats__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .c-c10-stats__header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .c-c10-stats__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #ffffff 0%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .c-c10-stats__subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .c-c10-stats__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .c-c10-stats__stat {
+    text-align: center;
+    position: relative;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .c-c10-stats__stat::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    padding: 2px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, transparent, #14b8a6, transparent);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+
+  .c-c10-stats__stat:hover::before {
+    opacity: 0.6;
+  }
+
+  .c-c10-stats__stat:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 
+      0 30px 60px rgba(0, 0, 0, 0.3),
+      0 0 80px rgba(20, 184, 166, 0.2);
+  }
+
+  .c-c10-stats__number {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+
+  .c-c10-stats__number-value {
+    background: linear-gradient(135deg, #3b82f6 0%, #14b8a6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: countUp 2s ease-out;
+  }
+
+  @keyframes countUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .c-c10-stats__number-plus,
+  .c-c10-stats__number-percent,
+  .c-c10-stats__number-unit {
+    font-size: 2rem;
+    color: #14b8a6;
+  }
+
+  .c-c10-stats__label {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+  }
+
+  .c-c10-stats__description {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.4;
+  }
+
+  .c-c10-stats__badges {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .c-c10-stats__badge {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .c-c10-stats__badge:hover {
+    background: rgba(20, 184, 166, 0.1);
+    border-color: rgba(20, 184, 166, 0.3);
+    color: #14b8a6;
+    transform: translateY(-2px);
+  }
+
+  .c-c10-stats__badge-icon {
+    width: 24px;
+    height: 24px;
+    color: #14b8a6;
+  }
+
+  @media (max-width: 968px) {
+    .c-c10-stats__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .c-c10-stats__badges {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .c-c10-stats__badge {
+      width: 100%;
+      max-width: 300px;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .c-c10-stats__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .c-c10-stats__number {
+      font-size: 3rem;
+    }
+
+    .c-c10-stats__number-plus,
+    .c-c10-stats__number-percent,
+    .c-c10-stats__number-unit {
+      font-size: 1.5rem;
+    }
+  }
+</style>
