@@ -5,6 +5,34 @@
 [build.environment]
   NODE_VERSION = "18"
 
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+  [plugins.inputs]
+    # Run Lighthouse on the entire site after build
+    audits = ["accessibility", "best-practices", "performance", "pwa", "seo"]
+    
+    # Upload Lighthouse results to Netlify 
+    upload = true
+    
+    # Set performance budget thresholds
+    budgets = [
+      {
+        "resourceSizes" = [
+          { "resourceType" = "total", "budget" = 500 }
+        ],
+        "resourceCounts" = [
+          { "resourceType" = "total", "budget" = 100 }
+        ]
+      }
+    ]
+    
+    # Fail build if performance scores are below thresholds
+    settings = {
+      "emulatedFormFactor" = "desktop",
+      "throttlingMethod" = "simulate"
+    }
+
 [[redirects]]
   from = "/*"
   to = "/404.html"
