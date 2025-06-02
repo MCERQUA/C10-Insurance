@@ -12,8 +12,8 @@
   
   "currentStatus": {
     "lastUpdated": "June 2, 2025",
-    "version": "v0.3.1",
-    "pagesCompleted": ["index.njk (homepage)"],
+    "version": "v0.3.2",
+    "pagesCompleted": ["index.njk (homepage)", "services.njk", "about.njk", "blog.njk", "contact.njk"],
     "componentsCreated": 12,
     "c10SpecificComponents": 6,
     "genericComponents": 6
@@ -182,6 +182,48 @@
     }
   },
   
+  "CRITICAL_DESIGN_RULES": {
+    "backgroundColors": {
+      "NEVER_USE": [
+        "white",
+        "#ffffff",
+        "#fff",
+        "rgba(255, 255, 255, 1)",
+        "linear-gradient with white",
+        "any light background color",
+        "any gradient that results in white/light appearance"
+      ],
+      "ALWAYS_USE": [
+        "#050714 (dark base)",
+        "#0f172a (dark secondary)",
+        "rgba(5, 7, 20, 0.95) (dark with transparency)",
+        "rgba(15, 23, 42, 0.95) (dark secondary with transparency)",
+        "rgba(255, 255, 255, 0.02) (very subtle white overlay for glassmorphism)",
+        "Linear gradients between dark colors only"
+      ]
+    },
+    "spacing": {
+      "CRITICAL_ISSUES": [
+        "NEVER add white space at top of pages before header",
+        "NEVER add white space at bottom of pages after footer",
+        "ALWAYS ensure sections connect seamlessly with no white gaps",
+        "Body margin and padding must always be 0",
+        "Main content wrapper padding must be 0"
+      ],
+      "REQUIRED_FIXES": [
+        "Remove all margin-top from first sections",
+        "Remove all margin-bottom from last sections",
+        "Set body margin: 0; padding: 0;",
+        "Set .main-content margin: 0; padding: 0;"
+      ]
+    },
+    "svgTrucks": {
+      "RULE": "NEVER include SVG truck drawings in any component",
+      "REASON": "SVG trucks look unprofessional and should not be used",
+      "EXCEPTIONS": "None - no SVG trucks anywhere on the site"
+    }
+  },
+  
   "workflowProcedures": {
     "sessionStart": [
       "Run 'echo init' command",
@@ -194,13 +236,19 @@
       "Review Component Registry for existing components",
       "Check if similar components can be reused",
       "Plan component composition for the page",
-      "Verify brand consistency"
+      "Verify brand consistency",
+      "ENSURE dark background colors only",
+      "ENSURE no white space issues",
+      "ENSURE no SVG trucks are included"
     ],
     "creatingNewComponent": [
       "Check Component Registry first",
       "Create component in appropriate folder",
       "Follow naming conventions",
       "Include self-contained styles",
+      "Use ONLY dark backgrounds",
+      "Remove any white space issues",
+      "NO SVG trucks allowed",
       "Document in Component Registry immediately",
       "Test component in isolation",
       "Update development log"
@@ -228,19 +276,33 @@
       "preventiveMeasure": "Use dateReadable filter for display, date() for attributes"
     },
     {
-      "issue": "White text on light background",
-      "cause": "Gradient background too light in CTA section",
-      "solution": "Updated to darker gradient starting with rgba(5, 7, 20, 0.98)",
-      "preventiveMeasure": "Always test text contrast on gradient backgrounds"
+      "issue": "White backgrounds appearing on pages",
+      "cause": "Using white or light background colors instead of dark theme",
+      "solution": "Change all backgrounds to dark colors (#050714, #0f172a, etc.)",
+      "preventiveMeasure": "ALWAYS use dark backgrounds, NEVER use white/light colors"
+    },
+    {
+      "issue": "White space at top and bottom of pages",
+      "cause": "Margins and padding on body, main-content, or sections",
+      "solution": "Set body margin:0; padding:0; and main-content margin:0; padding:0;",
+      "preventiveMeasure": "Always check for spacing issues and remove unnecessary margins"
+    },
+    {
+      "issue": "SVG trucks included in components",
+      "cause": "Adding decorative SVG truck graphics",
+      "solution": "Remove all SVG truck graphics immediately",
+      "preventiveMeasure": "NEVER include SVG trucks - they are not professional"
     }
   ],
   
   "nextSteps": [
+    "Fix white background issues on all pages",
+    "Remove white space at top/bottom of pages",
+    "Remove all SVG truck graphics",
     "Create quote form page with C10 model selector",
     "Build C10 coverage details page",
     "Add testimonials section from C10 owners",
     "Create C10-specific FAQ component",
-    "Build about page highlighting C10 expertise",
     "Add blog functionality for C10 tips and news",
     "Implement contact forms with C10 inquiry types"
   ],
@@ -251,6 +313,9 @@
     "Check all date filters use Nunjucks syntax",
     "Ensure all new components are documented",
     "Verify component registry is updated",
+    "Check for white background issues",
+    "Check for white space issues",
+    "Ensure no SVG trucks are present",
     "Update development log",
     "Ensure all new files are committed",
     "Push to GitHub main branch",
@@ -279,6 +344,9 @@
     "6 custom C10 components created for homepage",
     "Components use self-contained styles with glassmorphism effects",
     "Dark theme with blue/teal gradients throughout",
+    "NEVER USE WHITE BACKGROUNDS - ALWAYS DARK COLORS ONLY",
+    "NEVER ADD WHITE SPACE AT TOP/BOTTOM OF PAGES",
+    "NEVER INCLUDE SVG TRUCKS - THEY ARE NOT PROFESSIONAL",
     "All text must have good contrast",
     "Strong SEO focus on C10-related keywords",
     "Components are 'ingredients', pages are 'recipes'",
