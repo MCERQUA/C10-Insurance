@@ -35,7 +35,6 @@ const question = promisify(rl.question).bind(rl);
 async function ensureDirectories() {
   await fs.ensureDir(CONFIG.inputDir);
   await fs.ensureDir(CONFIG.outputDir);
-  await fs.ensureDir(path.join(CONFIG.outputDir, 'optimized'));
   await fs.ensureDir(path.dirname(CONFIG.docsFile));
 }
 
@@ -72,7 +71,7 @@ async function processImage(filename, description, category) {
 
     for (const format of CONFIG.formats) {
       const outputFilename = `${basename}-${sizeName}.${format}`;
-      const outputPath = path.join(CONFIG.outputDir, 'optimized', outputFilename);
+      const outputPath = path.join(CONFIG.outputDir, outputFilename);
 
       try {
         const pipeline = sharp(inputPath);
@@ -105,7 +104,7 @@ async function processImage(filename, description, category) {
 
         processedImages.push({
           filename: outputFilename,
-          path: `/images/optimized/${outputFilename}`,
+          path: `/images/${outputFilename}`,
           size: sizeName,
           format: format,
           dimensions: dimensions,
@@ -118,16 +117,16 @@ async function processImage(filename, description, category) {
     }
   }
 
-  // Also copy original to images folder
-  const originalOutputPath = path.join(CONFIG.outputDir, 'original', filename);
-  await fs.ensureDir(path.join(CONFIG.outputDir, 'original'));
+  // Also copy original to images folder with -original suffix
+  const originalFilename = `${basename}-original${path.extname(filename)}`;
+  const originalOutputPath = path.join(CONFIG.outputDir, originalFilename);
   await fs.copy(inputPath, originalOutputPath);
-  console.log(`  📂 Original copied to: /images/original/${filename}`);
+  console.log(`  📂 Original saved as: /images/${originalFilename}`);
 
   return {
     original: {
-      filename: filename,
-      path: `/images/original/${filename}`,
+      filename: originalFilename,
+      path: `/images/${originalFilename}`,
       width: metadata.width,
       height: metadata.height,
       format: metadata.format,
@@ -152,7 +151,7 @@ async function updateImageRegistry(imageData) {
     content = `# Image Registry - S10 Insurance Website
 
 ## Overview
-This registry tracks all optimized images available in the S10 Insurance website. Images are automatically processed and documented by the optimization script.
+This registry tracks all images available in the S10 Insurance website. Images are automatically processed and documented by the optimization script.
 
 ## Image Categories
 - **hero**: Hero section backgrounds and banners
@@ -162,6 +161,12 @@ This registry tracks all optimized images available in the S10 Insurance website
 - **team**: Team member photos
 - **misc**: Miscellaneous images
 
+## Naming Convention
+- Original: `[name]-original.[ext]`
+- Variants: `[name]-[size].[format]`
+  - Sizes: thumbnail, small, medium, large, hero
+  - Formats: jpg, webp
+
 ## Available Images
 
 `;
@@ -169,7 +174,7 @@ This registry tracks all optimized images available in the S10 Insurance website
 
   // Generate markdown for new image
   const imageEntry = `
-### ${imageData.original.filename}
+### ${path.basename(imageData.original.filename, path.extname(imageData.original.filename)).replace('-original', '')}
 
 **Description**: ${imageData.description}
 **Category**: ${imageData.category}
@@ -180,6 +185,7 @@ This registry tracks all optimized images available in the S10 Insurance website
 
 | Size | Format | Dimensions | File Size | Path |
 |------|--------|------------|-----------|------|
+| original | ${path.extname(imageData.original.filename).slice(1)} | ${imageData.original.width}x${imageData.original.height} | - | \`${imageData.original.path}\` |
 `;
 
   const variantRows = imageData.variants.map(variant => {
@@ -192,12 +198,14 @@ This registry tracks all optimized images available in the S10 Insurance website
   const fullEntry = imageEntry + variantRows + '\n';
 
   // Check if image already exists in registry
-  const imageHeaderRegex = new RegExp(`### ${imageData.original.filename}\\n`, 'g');
-  if (content.includes(`### ${imageData.original.filename}`)) {
+  const baseImageName = path.basename(imageData.original.filename, path.extname(imageData.original.filename)).replace('-original', '');
+  const imageHeaderRegex = new RegExp(`### ${baseImageName}\\n`, 'g');
+  
+  if (content.includes(`### ${baseImageName}`)) {
     // Find and replace existing entry
     const sections = content.split(/### /);
     const updatedSections = sections.map(section => {
-      if (section.startsWith(imageData.original.filename)) {
+      if (section.startsWith(baseImageName)) {
         return fullEntry.substring(4); // Remove the ### prefix
       }
       return section;
