@@ -1,61 +1,61 @@
 {
   "project": {
-    "name": "S10 Insurance Website",
-    "type": "Specialized insurance for Chevy S10 pickup trucks",
+    "name": "C10 Insurance Website",
+    "type": "Specialized insurance for Chevy C10 pickup trucks",
     "framework": "Eleventy (11ty) v2.0.1",
     "templateEngine": "Nunjucks",
     "deployment": "Netlify",
-    "repository": "https://github.com/MCERQUA/S10-Insurance",
-    "liveUrl": "https://s10insurance.netlify.app",
-    "targetAudience": "Chevy S10 pickup truck owners (1982-2004 models)"
+    "repository": "https://github.com/MCERQUA/C10-Insurance",
+    "liveUrl": "https://c10insurance.netlify.app",
+    "targetAudience": "Chevy C10 pickup truck owners (1960-1998 C/K series)"
   },
   
   "currentStatus": {
     "lastUpdated": "June 1, 2025",
-    "version": "v0.2.0",
+    "version": "v0.3.0",
     "pagesCompleted": ["index.njk (homepage)"],
     "componentsCreated": 11,
-    "s10SpecificComponents": 6,
+    "c10SpecificComponents": 6,
     "genericComponents": 5
   },
   
-  "s10Components": {
+  "c10Components": {
     "created": [
       {
-        "name": "section-hero-s10",
-        "path": "src/_includes/components/sections/section-hero-s10.njk",
-        "purpose": "S10-specific hero with SEO focus, animated truck silhouette",
-        "features": ["Animated orbs", "Trust indicators", "Dual CTAs", "S10 truck SVG"]
+        "name": "section-hero-c10",
+        "path": "src/_includes/components/sections/section-hero-c10.njk",
+        "purpose": "C10-specific hero with SEO focus, animated truck silhouette",
+        "features": ["Animated orbs", "Trust indicators", "Dual CTAs", "C10 truck SVG"]
       },
       {
-        "name": "section-s10-models",
-        "path": "src/_includes/components/sections/section-s10-models.njk",
-        "purpose": "Showcase all S10 generations and models",
-        "features": ["Timeline display", "1982-2004 coverage", "All variants listed"]
+        "name": "section-c10-models",
+        "path": "src/_includes/components/sections/section-c10-models.njk",
+        "purpose": "Showcase all C10 generations and models",
+        "features": ["Timeline display", "1960-1998 coverage", "All variants listed"]
       },
       {
-        "name": "section-why-s10",
-        "path": "src/_includes/components/sections/section-why-s10.njk",
-        "purpose": "Value proposition for S10-specific insurance",
+        "name": "section-why-c10",
+        "path": "src/_includes/components/sections/section-why-c10.njk",
+        "purpose": "Value proposition for C10-specific insurance",
         "features": ["6 key reasons", "Comparison table", "25+ years experience highlight"]
       },
       {
         "name": "section-coverage-grid",
         "path": "src/_includes/components/sections/section-coverage-grid.njk",
-        "purpose": "Display S10 coverage options",
+        "purpose": "Display C10 coverage options",
         "features": ["6 coverage types", "Pricing from $89/month", "Included features list"]
       },
       {
-        "name": "section-s10-stats",
-        "path": "src/_includes/components/sections/section-s10-stats.njk",
+        "name": "section-c10-stats",
+        "path": "src/_includes/components/sections/section-c10-stats.njk",
         "purpose": "Trust indicators and statistics",
-        "features": ["15,000+ S10s insured", "40% savings", "4.9/5 rating", "98% satisfaction"]
+        "features": ["15,000+ C10s insured", "40% savings", "4.9/5 rating", "98% satisfaction"]
       },
       {
-        "name": "section-cta-s10",
-        "path": "src/_includes/components/sections/section-cta-s10.njk",
+        "name": "section-cta-c10",
+        "path": "src/_includes/components/sections/section-cta-c10.njk",
         "purpose": "Strong call to action section",
-        "features": ["Animated S10 truck", "60-second quote", "Dark gradient background fix"]
+        "features": ["Animated C10 truck", "60-second quote", "Dark gradient background fix"]
       }
     ]
   },
@@ -108,31 +108,34 @@
       "componentRegistry": "/docs/components/COMPONENT_REGISTRY.md",
       "usageGuide": "/docs/components/COMPONENT_USAGE_GUIDE.md",
       "developmentLog": "/docs/development-log.md",
-      "brandStyleGuide": "/docs/Website-brand-style-sheet-for-S10.html"
+      "brandStyleGuide": "/docs/Website-brand-style-sheet-for-C10.html"
     }
   },
   
   "seoStrategy": {
     "primaryKeywords": [
-      "S10 insurance",
-      "Chevy S10 insurance",
-      "S10 pickup insurance",
-      "S10 truck insurance",
-      "Chevrolet S10 insurance"
+      "C10 insurance",
+      "Chevy C10 insurance",
+      "C10 pickup insurance",
+      "C10 truck insurance",
+      "Chevrolet C10 insurance"
     ],
     "modelKeywords": [
-      "S10 Blazer insurance",
-      "S10 ZR2 insurance",
-      "S10 SS insurance",
-      "S10 Xtreme insurance",
-      "S10 Extended Cab insurance"
+      "C10 Fleetside insurance",
+      "C10 Stepside insurance",
+      "C10 Suburban insurance",
+      "C10 Cheyenne insurance",
+      "C10 Silverado insurance",
+      "C10 Scottsdale insurance",
+      "C10 Custom insurance",
+      "C10 Deluxe insurance"
     ],
-    "yearRange": "1982-2004",
+    "yearRange": "1960-1998",
     "uniqueSellingProps": [
-      "S10 specialist since 1999",
+      "C10 specialist since 1999",
       "Save up to 40%",
-      "15,000+ S10s insured",
-      "24/7 S10 support"
+      "15,000+ C10s insured",
+      "24/7 C10 support"
     ]
   },
   
@@ -233,13 +236,13 @@
   ],
   
   "nextSteps": [
-    "Create quote form page with S10 model selector",
-    "Build S10 coverage details page",
-    "Add testimonials section from S10 owners",
-    "Create S10-specific FAQ component",
-    "Build about page highlighting S10 expertise",
-    "Add blog functionality for S10 tips and news",
-    "Implement contact forms with S10 inquiry types"
+    "Create quote form page with C10 model selector",
+    "Build C10 coverage details page",
+    "Add testimonials section from C10 owners",
+    "Create C10-specific FAQ component",
+    "Build about page highlighting C10 expertise",
+    "Add blog functionality for C10 tips and news",
+    "Implement contact forms with C10 inquiry types"
   ],
   
   "deploymentChecklist": [
@@ -267,17 +270,17 @@
     "nunjucks": "https://mozilla.github.io/nunjucks/",
     "eleventy": "https://www.11ty.dev/",
     "netlify": "https://docs.netlify.com/",
-    "projectRepo": "https://github.com/MCERQUA/S10-Insurance"
+    "projectRepo": "https://github.com/MCERQUA/C10-Insurance"
   },
   
   "aiNotes": [
     "CRITICAL: Run 'echo init' at start of every session",
-    "This is an S10-specific insurance website targeting 1982-2004 Chevy S10 owners",
-    "6 custom S10 components created for homepage",
+    "This is a C10-specific insurance website targeting 1960-1998 Chevy C10 owners",
+    "6 custom C10 components created for homepage",
     "Components use self-contained styles with glassmorphism effects",
     "Dark theme with blue/teal gradients throughout",
     "All text must have good contrast - CTA section updated with darker bg",
-    "Strong SEO focus on S10-related keywords",
+    "Strong SEO focus on C10-related keywords",
     "Components are 'ingredients', pages are 'recipes'",
     "This project uses Nunjucks, not Liquid - syntax is different",
     "Always test template changes locally first",
