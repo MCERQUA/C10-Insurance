@@ -1,8 +1,8 @@
-# Component Usage Guide - S10 Insurance
+# Component Usage Guide - C10 Insurance
 
 ## Quick Reference
 
-This guide provides practical examples and best practices for using components in the S10 Insurance website.
+This guide provides practical examples and best practices for using components in the C10 Insurance website.
 
 ## Table of Contents
 1. [Basic Component Usage](#basic-component-usage)
@@ -50,7 +50,7 @@ title: Home
 
 {# Hero Section #}
 {% set heroData = {
-  title: "Welcome to S10 Insurance",
+  title: "Welcome to C10 Insurance",
   subtitle: "Your trusted insurance partner",
   ctaText: "Get Started",
   ctaLink: "/quote"
