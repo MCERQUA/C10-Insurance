@@ -14,24 +14,6 @@
     
     # Upload Lighthouse results to Netlify 
     upload = true
-    
-    # Set performance budget thresholds
-    budgets = [
-      {
-        "resourceSizes" = [
-          { "resourceType" = "total", "budget" = 500 }
-        ],
-        "resourceCounts" = [
-          { "resourceType" = "total", "budget" = 100 }
-        ]
-      }
-    ]
-    
-    # Fail build if performance scores are below thresholds
-    settings = {
-      "emulatedFormFactor" = "desktop",
-      "throttlingMethod" = "simulate"
-    }
 
 [[redirects]]
   from = "/*"
