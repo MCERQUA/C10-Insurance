@@ -1,27 +1,116 @@
 ---
-layout: page.njk
-title: Our Services
-description: Explore our comprehensive range of insurance services designed to protect you and your assets.
+layout: base.njk
+title: C10 Insurance Services - Specialized Coverage for Every Chevy C10
+description: Explore our comprehensive C10 insurance services. From classic restoration coverage to daily driver protection, we have the perfect policy for your 1960-1998 Chevy C10 pickup.
 ---
 
-<div class="services-grid">
-  <div class="service">
-    <h2>Auto Insurance</h2>
-    <p>Comprehensive coverage for your vehicles with competitive rates and excellent service.</p>
+{# Page Header #}
+{% set pageHeaderData = {
+  title: "C10 Insurance Services",
+  subtitle: "Specialized coverage options designed exclusively for 1960-1998 Chevy C10 pickups",
+  breadcrumbs: ["Services"]
+} %}
+{% include "components/sections/section-page-header.njk" %}
+
+{# Services Grid #}
+{% set servicesData = {
+  title: "Complete C10 Coverage Solutions",
+  subtitle: "From bone-stock classics to heavily modified show trucks, we've got your C10 covered"
+} %}
+{% include "components/sections/section-services-c10.njk" %}
+
+{# Why Choose C10 Insurance #}
+{% include "components/sections/section-why-c10.njk" %}
+
+{# Call to Action #}
+{% include "components/sections/section-cta-c10.njk" %}
+
+{# SEO Content Section #}
+<section class="seo-content">
+  <div class="container">
+    <h2>Specialized Insurance for Every C10 Generation</h2>
+    <p>At C10 Insurance, we understand that no two Chevy C10s are alike. Whether you own a first-generation 1960-1966 model, a second-generation 1967-1972 classic, or any C10 through the 1998 model year, our specialized coverage options are tailored to meet your specific needs.</p>
+    
+    <h3>Coverage for All C10 Models and Variants</h3>
+    <p>Our insurance policies cover all C10 variants including Fleetside, Stepside, Suburban, Panel trucks, and all trim levels from Custom Deluxe to Cheyenne and Silverado. We also provide specialized coverage for rare models like the Camper Special and Big 10 variants.</p>
+    
+    <h3>Why C10 Owners Choose Our Services</h3>
+    <p>With over 25 years of experience insuring classic Chevy C10 trucks, we've built our reputation on understanding the unique value and requirements of these iconic vehicles. Our adjusters are C10 experts who speak your language and understand the difference between a numbers-matching restoration and a custom restomod.</p>
+    
+    <p>Contact us today at <strong>844-967-5247</strong> to discuss your C10 insurance needs with a specialist who understands your truck.</p>
   </div>
+</section>
+
+<style>
+.seo-content {
+  padding: 4rem 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.95) 0%, rgba(5, 7, 20, 0.95) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.seo-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+}
+
+.seo-content .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.seo-content h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #14b8a6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.seo-content h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+  color: #60a5fa;
+}
+
+.seo-content p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
+}
+
+.seo-content strong {
+  color: #14b8a6;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .seo-content {
+    padding: 3rem 0;
+  }
   
-  <div class="service">
-    <h2>Home Insurance</h2>
-    <p>Protect your home and belongings with our comprehensive homeowner's insurance policies.</p>
-  </div>
+  .seo-content h2 {
+    font-size: 2rem;
+  }
   
-  <div class="service">
-    <h2>Life Insurance</h2>
-    <p>Secure your family's future with our flexible life insurance options.</p>
-  </div>
-  
-  <div class="service">
-    <h2>Business Insurance</h2>
-    <p>Keep your business protected with our comprehensive commercial insurance solutions.</p>
-  </div>
-</div>
+  .seo-content h3 {
+    font-size: 1.5rem;
+  }
+}
+</style>
