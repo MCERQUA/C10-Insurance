@@ -6,6 +6,10 @@
         <div class="footer-section">
           <h3 class="footer-title">{{ site.name }}</h3>
           <p class="footer-desc">Specialized insurance coverage for 1960-1998 Chevy C10 pickup trucks. Protecting America's favorite classic trucks since 1999.</p>
+          <div class="footer-licenses">
+            <p><strong>ROC #335896</strong></p>
+            <p>Licensed in All 50 States</p>
+          </div>
           <div class="footer-social">
             <a href="https://www.facebook.com/c10insurance" aria-label="Facebook" rel="noopener noreferrer" target="_blank">
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -69,7 +73,7 @@
   <div class="footer-bottom">
     <div class="container">
       <div class="footer-bottom-content">
-        <p>&copy; {{ 'now' | date('%Y') }} {{ site.name }}. All rights reserved. | Specializing in 1960-1998 Chevy C10 Insurance</p>
+        <p>&copy; {{ 'now' | date('%Y') }} {{ site.name }}. All rights reserved. | Specializing in 1960-1998 Chevy C10 Insurance | ROC #335896</p>
         <nav class="footer-legal">
           <a href="/privacy/">Privacy Policy</a>
           <span class="separator">|</span>
@@ -154,8 +158,22 @@
 
 .footer-desc {
   line-height: 1.6;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-licenses {
   margin-bottom: 1.5rem;
   color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-licenses p {
+  margin-bottom: 0.25rem;
+}
+
+.footer-licenses strong {
+  color: #14b8a6;
+  font-weight: 600;
 }
 
 .footer-social {
