@@ -5,6 +5,41 @@ Track all development activities, decisions, and changes to maintain consistency
 
 ---
 
+## June 3, 2025 - ROC Number Update
+
+### Critical Update
+- **Updated ROC number to correct value: #335896**
+- This is a legal requirement - displaying incorrect ROC numbers is unlawful
+
+### Files Modified
+1. **footer.njk**:
+   - Added ROC #335896 display in company info section
+   - Added ROC #335896 to footer bottom copyright line
+   - Styled ROC number with teal accent color for visibility
+
+2. **section-c10-stats.njk**:
+   - Added ROC #335896 as a fourth trust badge
+   - Included building icon for ROC badge
+   - Maintains consistent badge styling
+
+### Locations Where ROC #335896 is Now Displayed
+- Footer company info section (prominent display)
+- Footer copyright line
+- Stats section trust badges
+- Memory.json already had correct number
+
+### Technical Implementation
+- ROC number styled with `color: #14b8a6` in footer for emphasis
+- Added as trust badge in stats section for credibility
+- Consistent formatting as "ROC #335896" throughout
+
+### Legal Compliance
+- Ensured ROC #335896 is accurately displayed site-wide
+- Removed any potential for incorrect ROC numbers
+- Prominent display in footer ensures visibility on all pages
+
+---
+
 ## June 2, 2025 - CRITICAL: Fixed White Space and Background Issues
 
 ### Major Issues Resolved
@@ -207,7 +242,7 @@ Track all development activities, decisions, and changes to maintain consistency
 5. **section-c10-stats.njk** - Statistics section:
    - 4 key metrics with animated numbers
    - 3D perspective grid background
-   - Trust badges at bottom
+   - Trust badges at bottom (now includes ROC #335896)
    - Count-up animation on numbers
 
 6. **section-cta-c10.njk** - Call to action section:
@@ -288,7 +323,7 @@ Track all development activities, decisions, and changes to maintain consistency
 | section-c10-models | Section | Complete | Model timeline |
 | section-why-c10 | Section | Complete | Value proposition |
 | section-coverage-grid | Section | Complete | Coverage options |
-| section-c10-stats | Section | Complete | Trust metrics |
+| section-c10-stats | Section | Updated | Trust metrics + ROC #335896 |
 | section-cta-c10 | Section | Complete | Call to action |
 | ui-top-banner | UI | Complete | Click-to-call banner |
 | section-page-header | Section | Fixed | Dark background, no SVG |
@@ -317,6 +352,7 @@ Track all development activities, decisions, and changes to maintain consistency
 - ✅ White space at top/bottom of pages
 - ✅ White/light backgrounds on pages
 - ✅ Unprofessional SVG truck graphics
+- ✅ ROC number display (updated to #335896)
 
 ---
 
@@ -371,6 +407,7 @@ Track all development activities, decisions, and changes to maintain consistency
 ---
 
 ## Version History
+- v0.3.4 - Updated ROC number to correct value #335896 across website
 - v0.3.3 - CRITICAL: Fixed white space and background issues, removed SVG trucks
 - v0.3.2 - Added Netlify Lighthouse plugin for automated performance monitoring
 - v0.3.1 - Documentation cleanup and optimization
